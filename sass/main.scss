@@ -1,0 +1,44 @@
+// 7-1 Folder Pattern
+// Abstracts
+@import "abstracts/_variables";
+@import "abstracts/_functions";
+@import "abstracts/_mixins";
+
+// Base
+@import "base/_reset";
+@import "base/_utilities";
+@import "base/_base";
+@import "base/_typography";
+@import "base/_animations";
+
+// Components
+@import "components/_navigation";
+@import "components/_button";
+@import "components/_carousel";
+@import "components/_dropdown";
+@import "components/searchbar";
+@import "components/cookies";
+@import "components/cookies_manager";
+
+// Layout
+@import "layout/_header";
+@import "layout/_footer";
+@import "layout/_grid";
+@import "layout/_hero";
+@import "layout/_flex";
+@import "layout/_skill";
+@import "layout/_step";
+// Pages
+@import "pages/_home";
+@import "pages/_contact";
+@import "pages/_portfolio";
+
+// States
+@import "states/_button-states";
+
+// Themes
+@import "themes/_theme";
+@import "themes/_dark-mode";
+
+// Vendors
+@import "vendors/_bootstrap";

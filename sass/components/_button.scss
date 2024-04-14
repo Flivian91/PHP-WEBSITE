@@ -1,0 +1,41 @@
+.btn {
+  &:visited,
+  &:link {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    background-color: $color-tertiary;
+    color: $color-white;
+    border-radius: 3px;
+    transition: all 0.3s;
+  }
+
+  &:hover {
+    transform: scale(1.03);
+  }
+  span {
+    &:first-child {
+      color: $color-tertiary-text;
+    }
+    &:nth-child(2) {
+      padding: 0 5px;
+      text-transform: uppercase;
+    }
+  }
+}
+.nav__right--login .btn__signin {
+  @include btn-style;
+
+  &:hover {
+    border: 1px solid #333;
+  }
+}
+#btn__cookies--decline {
+@include btn-style;
+}
+
+#btn__cookies--accept,
+#btn__cookies--decline {
+  font-size: 1.1rem;
+  text-align: center;
+}

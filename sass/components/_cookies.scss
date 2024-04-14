@@ -1,0 +1,40 @@
+.cookies {
+  display: grid;
+  grid-template-columns: 2fr 1fr .5fr;
+  align-items: center;
+
+  position: fixed;
+  top: 78vh;
+  left: 0;
+  padding: 1rem 4rem;
+  background-color: $color-background-final-1;
+  column-gap: 2.8rem;
+  z-index: 999;
+
+  &__details {
+    p {
+      font-size: 1.1rem;
+      color: $color-black;
+    }
+    a {
+      margin-left: 0.3rem;
+      color: $color-tertiary-text;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    span {
+      margin-left: 3rem;
+    }
+  }
+  &__btn {
+    font-size: 1.2rem;
+    gap: 0.7rem;
+  }
+}
+
+// Cookies to be hidden
+.cookies-cancel {
+  display: none;
+}

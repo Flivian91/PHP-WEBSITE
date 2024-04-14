@@ -1,0 +1,74 @@
+.search {
+  // background-color: blue;
+
+  border-radius: 2rem;
+  padding: 0.5rem 2rem;
+  overflow: hidden;
+  background-color: $color-primary-light;
+
+  display: grid;
+  grid-template-columns: 1.2fr 0.2fr 5.8fr .8fr;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.4rem;
+  margin-top: 2rem;
+  z-index: 999;
+  position: absolute;
+  // max-width: 130rem;
+  top: -1.24rem;
+  left: 2rem;
+
+
+  &__input {
+    // border-bottom: 2px solid black;
+    // background-color: green;
+    padding: 0.2rem 0.8rem;
+    position: relative;
+    border-radius: 0.2rem;
+    // &:hover {
+    //   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.38);
+    // }
+    input {
+      display: inline-block;
+      width: 100%;
+      border: none;
+      padding: 0.8rem 0.1rem;
+      font-size: 1.2rem;
+      border-bottom: 1.5px solid rgba(0, 0, 0, 0.377);
+      background-color: $color-primary-light;
+      transition: all 0.2s;
+
+      &::placeholder {
+        color: #7d7d7d;
+        font-weight: 200;
+        font-size: 0.9rem;
+      }
+      &:focus {
+        border: none;
+        outline: none;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.38);
+        border: none;
+        .search {
+          &__input {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.38);
+          }
+        }
+      }
+    }
+    &-cancel {
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2.5rem;
+      color: $color-black;
+      cursor: pointer;
+    }
+  }
+}
+
+// Removes the Search icon on the screen
+
+.search-cancel {
+  display: none;
+}

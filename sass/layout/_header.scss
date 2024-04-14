@@ -1,0 +1,7 @@
+.header {
+  background-color: $color-background-final;
+  overflow: hidden;
+  
+  @include postion-section
+  
+}

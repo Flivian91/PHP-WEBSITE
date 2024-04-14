@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div onscroll="console.log('hello')" class="hero">
+        <div class="nav flex-row__space-btwn">
+          <div class="nav__left flex-row__start">
+            <div class="nav__left--logo flex-row__start">
+              <a href="#">
+                <img
+                  title="Refresh"
+                  src="/img/php logo resized.png"
+                  alt="PHP logo"
+                />
+              </a>
+              <span>
+                <span class="nav__left--logo-1">P</span>
+                <span class="nav__left--logo-2">H</span>
+                <span class="nav__left--logo-3">P</span>
+              </span>
+            </div>
+            <div class="nav__left--navbar flex-row__center">
+              <nav class="nav__navbar flex-row__start">
+                <a href="#" class="nav__navbar--items">Home</a>
+                <a href="#" class="nav__navbar--items"> Features </a>
+                <a href="#" class="nav__navbar--items">Solutions</a>
+                <a href="#" class="nav__navbar--items">Resources</a>
+              </nav>
+            </div>
+          </div>
+          <div class="nav__right flex-row__space-btwn">
+            <div id="search" class="nav__right--search">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </div>
+            <div class="nav__right--login flex-row__center">
+              <a href="#" class="btn btn__signin">Signin</a>
+              <a href="#" class="btn btn__join"
+                >Join
+                <span>
+                  <span class="nav__left--logo-1">P</span>
+                  <span class="nav__left--logo-2">H</span>
+                  <span class="nav__left--logo-3">P</span>
+                </span>
+                Community</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Search bar Div -->
+        <div class="search search-cancel">
+          <div class="nav__left--logo flex-row__start">
+            <a href="#">
+              <img
+                title="Refresh"
+                src="/img/php logo resized.png"
+                alt="PHP logo"
+              />
+            </a>
+            <span>
+              <span class="nav__left--logo-1">P</span>
+              <span class="nav__left--logo-2">H</span>
+              <span class="nav__left--logo-3">P</span>
+            </span>
+          </div>
+
+          <div class="nav__right--search">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </div>
+          <div class="search__input">
+            <input
+              id="input-search"
+              maxlength="60"
+              type="text"
+              placeholder="Find Anything(ie. Teams, Community, or Reset Password)"
+            />
+            <div id="cancel" class="search__input-cancel">&times;</div>
+          </div>
+
+          <div class="nav__right--login">
+            <a href="#" class="btn btn__signin">Search</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- DropDown menu -->
+
+    <!-- SignIn Form -->
+    <section class="container">
+      <div class="signin-container">
+        <div class="signin-descriptions">
+          <img
+            src="/img/php logo resized.png"
+            alt="MeccaTech Logo"
+            width="60%"
+          />
+          <h1>Sign in</h1>
+        </div>
+        <div class="signin-form">
+          <form class="form" action="home.html" method="post">
+            <div class="email-section">
+              <label for="email">Email address</label>
+              <input type="email" id="email" required name="email" />
+            </div>
+            <div class="password-section">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" required />
+            </div>
+            <div class="checkbox-section">
+              <div class="checkbox">
+                <input type="checkbox" id="checkbox" name="checkbox" />
+                <label class="remember" for="checkbox">Remember me</label>
+              </div>
+              <div class="forget-password">
+                <a href="#">Forget Password?</a>
+              </div>
+            </div>
+            <div class="signin-btn">
+              <input type="submit" value="Sign in" name="" />
+            </div>
+          </form>
+          <div class="continue-with">
+            <p></p>
+            <h2>Or continue with</h2>
+            <p></p>
+          </div>
+          <div class="option-signin">
+            <a href="#">
+              <ion-icon class="google-icon" name="logo-google"></ion-icon>
+              Google
+            </a>
+            <a href="#">
+              <ion-icon class="google-icon" name="logo-github"></ion-icon>
+              GitHub
+            </a>
+          </div>
+        </div>
+        <div class="not-member">
+          <p>Not a member?</p>
+          <a href="#">Sign up for free</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- COOKIES -->
+    <!-- Coookie Section -->
+    <div class="cookies cookies-cancel">
+      <div class="cookies__details">
+        <p>
+          This website uses cookies to enhance user experience and to analyze
+          performance and traffic on our website. We also share information
+          about your use of our site with our social media, advertising and
+          analytics partners.<a onclick="managerCookies()" href="#"
+            >More Info</a
+          >
+        </p>
+      </div>
+      <div class="cookies__btn flex-column">
+        <a href="#" id="btn__cookies--accept" class="btn btn__join"
+          >Accept All Cookies</a
+        >
+        <a href="#" id="btn__cookies--decline" class="btn btn__join"
+          >Decline Cookies</a
+        >
+      </div>
+      <div class="search__input-cancel flex-row__center">
+        <span class="cancel-cookies">&times;</span>
+      </div>
+    </div>
+
+    <!-- Cookies Management  -->
+    <section class="manager close-manager">
+      <div class="manager__header flex-row__space-btwn">
+        <div class="nav__left--logo flex-row__start">
+          <a href="#">
+            <img
+              title="Refresh"
+              src="/img/php logo resized.png"
+              alt="PHP logo"
+            />
+          </a>
+          <span>
+            <span class="nav__left--logo-1">&nbsp;P</span>
+            <span class="nav__left--logo-2">H</span>
+            <span class="nav__left--logo-3">P</span>
+          </span>
+        </div>
+        <div>
+          <div class="manager__header--cancel">
+            <span class="manager-close">&times;</span>
+          </div>
+        </div>
+      </div>
+      <div class="manager__body">
+        <div class="manager__constent flex-column">
+          <h2>Cookie Consent Manager</h2>
+          <p>
+            Company LogoCookie Consent Manager We use three kinds of cookies on
+            our websites: required, functional, and advertising. You can choose
+            whether functional and advertising cookies apply. Click on the
+            different cookie categories to find out more about each category and
+            to change the default settings.
+          </p>
+          <a
+            onclick="acceptCookie()"
+            href="#"
+            id="manager__btn"
+            class="close-cookies btn btn__join"
+            >Accept All Cookies</a
+          >
+          <h2>Manage Consent Preferences</h2>
+        </div>
+        <div class="manager__require">
+          <div class="flex-row__space-btwn">
+            <h3>Required Cookies</h3>
+            <em>Always Active</em>
+          </div>
+          <p>
+            Required cookies are necessary for basic website functionality. Some
+            examples include: session cookies needed to transmit the website,
+            authentication cookies, and security cookies.
+          </p>
+        </div>
+        <div class="manager__require">
+          <div class="flex-row__space-btwn">
+            <h3>Functional Cookies</h3>
+            <input
+              type="checkbox"
+              name="checkbox"
+              class="check"
+              value="clicked"
+            />
+          </div>
+          <p>
+            Functional cookies enhance functions, performance, and services on
+            the website. Some examples include: cookies used to analyze site
+            traffic, cookies used for market research, and cookies used to
+            display advertising that is not directed to a particular individual.
+          </p>
+        </div>
+        <div class="manager__require">
+          <div class="flex-row__space-btwn">
+            <h3>Advertising Cookies</h3>
+            <input
+              type="checkbox"
+              name="checkbox"
+              class="check1"
+              value="clicked"
+            />
+          </div>
+          <p>
+            Advertising cookies track activity across websites in order to
+            understand a viewer’s interests, and direct them specific marketing.
+            Some examples include: cookies used for remarketing, or
+            interest-based advertising
+          </p>
+        </div>
+        <div class="manager__save">
+          <a
+            onclick="acceptCookie()"
+            href="#"
+            id="manager__btn"
+            class="btn btn__join"
+            >Save Settings</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Javascript Files -->
+    <script src="js/search.js"></script>
+    <script src="js/cookies.js"></script>
+    <script src="js/cookies-manager.js"></script>
+  </body>
+</html>
+
+<!-- Coloros
+Primary color #59FFA0 
+Secondary color #297045
+Tertiary color #B2FFD6-->
+
+<!-- 
+  <i class="fa fa-cloud-upload" aria-hidden="true"></i> upload icon
+  <i class="fa fa-cloud-download" aria-hidden="true"></i>
+  <i class="fa fa-times" aria-hidden="true"></i> close icon
+ -->
