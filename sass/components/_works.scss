@@ -1,0 +1,312 @@
+.works {
+  gap: 3rem;
+  padding: 3rem 3rem;
+
+  @include respond(phone) {
+    padding: 2rem 1rem;
+  }
+
+  &__intro {
+    padding-bottom: 2rem;
+    span {
+      @include intro-part;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 2rem;
+    align-items: center;
+
+    &--intro {
+      h1 {
+        font-size: 6rem;
+
+        @include respond(phone) {
+          font-size: 4rem;
+        }
+      }
+    }
+    &--para {
+      font-size: 1.8rem;
+      color: $color-black-light;
+    }
+  }
+
+  &__body {
+    margin-top: 2rem;
+    gap: 1rem;
+  }
+
+  &__cards {
+    transition: all 0.4s ease-in-out;
+    gap: 1rem;
+    box-shadow: 0 3px 3px rgb(195, 193, 193);
+    // padding: 1rem 1rem;
+    border-radius: 0.3rem;
+
+    &:hover {
+      // border: 1px solid $color-tertiary;
+      img {
+        border-radius: 50%;
+      }
+    }
+
+    &--image {
+      img {
+        max-width: 100%;
+        border-radius: 1rem;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        // height: 20rem;
+      }
+    }
+    &--details {
+      gap: 0.5rem;
+      padding: 1rem 1rem;
+
+      h1 {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: $color-black;
+
+        ion-icon {
+          font-size: 3rem;
+          color: $color-tertiary;
+        }
+      }
+
+      p {
+        font-size: 1.8rem;
+        color: $color-black-light;
+      }
+    }
+  }
+}
+.works .works__body {
+  @include respond(tab-port) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin: 0 6rem;
+  }
+  @include respond(phone) {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    margin: 0 2rem;
+  }
+}
+.works .works__heading {
+  @include respond(phone) {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 1rem 2rem;
+  }
+}
+
+// Slide Section
+.slider {
+  width: 100%;
+  height: 50rem;
+  padding: 1rem 15rem;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  // margin-right: 5rem;
+  @include respond(phone745) {
+    height: 110rem;
+    padding: 1rem 10rem;
+  }
+  @include respond(phone) {
+    padding: 1rem 6rem;
+    height: 90rem;
+  }
+  @include respond(min-phone) {
+    padding: 1rem 6rem;
+    height: 80rem;
+  }
+}
+.slider__next {
+  position: absolute;
+  top: 50%;
+  right: 3rem;
+  transform: translateY(-50%);
+  @include respond(phone745) {
+    right: 1rem;
+  }
+}
+.slide__previous {
+  position: absolute;
+  top: 50%;
+  left: 3rem;
+  transform: translateY(-50%);
+  @include respond(phone745) {
+    left: 0rem;
+  }
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  width: 75%;
+
+  height: 40rem;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 3rem;
+  @include respond(tab-land) {
+    height: 38rem;
+  }
+
+  &__navigate {
+    ion-icon {
+      font-size: 5rem;
+      color: $color-tertiary;
+      transition: all 0.4s;
+      cursor: pointer;
+      transform: rotateY(20deg);
+
+      &:hover {
+        transform: scale(1.05);
+        transform: rotateY(0);
+      }
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+  }
+  // Main part of the slider
+  &__main {
+    // background-color: red;
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+    border: 2px solid rgba(221, 221, 224, 0.305);
+    padding: 2rem;
+    column-gap: 2rem;
+    border-radius: 1rem;
+    background-color: $color-accent;
+    box-shadow: 0 3px 5px #1b9925;
+    @include respond(phone745) {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    &--image {
+      // background-color: green;
+      transition: all 0.5s;
+
+      &:hover {
+        img {
+          border-radius: 50%;
+          transform: scale(1.05);
+        }
+      }
+
+      img {
+        // transform: translateX(-3rem);
+        max-width: 100%;
+        border-radius: 0.5rem;
+        // max-height: 30rem;
+      }
+    }
+    &--info {
+      padding: 1rem 2rem;
+      gap: 1.5rem;
+      border-radius: 1rem;
+
+      h1 {
+        font-size: 2rem;
+        color: $color-black-light;
+        font-weight: 600;
+      }
+
+      p {
+        font-size: 4rem;
+        font-weight: 500;
+        color: black;
+      }
+    }
+  }
+  &__quote {
+    padding-left: 5rem;
+    position: relative;
+    &::before {
+      content: "\201C";
+      position: absolute;
+      top: -4.5rem;
+      left: 0rem;
+      font-size: 10rem;
+      color: aqua;
+    }
+
+    blockquote {
+      font-size: 1.6rem;
+      color: $color-black-light;
+      line-height: 1.2;
+    }
+    a {
+      &:link,
+      &:visited {
+        margin-top: 5rem;
+
+        padding: 1rem 3rem;
+        width: 15rem;
+        background-color: $color-primary-dark;
+        font-size: 1.6rem;
+        font-weight: 600;
+        border-radius: 1rem;
+        color: $color-black;
+
+        float: right;
+        margin-right: 2rem;
+      }
+    }
+  }
+  &__tabs {
+    position: absolute;
+    // background-color: red;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    @include respond(tab-land) {
+      bottom: 0rem;
+    }
+
+    button {
+      border: none;
+      outline: none;
+      // padding: 1rem;
+      height: 2rem;
+      width: 2rem;
+      border-radius: 50%;
+      background-color: $color-tertiary;
+      cursor: pointer;
+      opacity: 0.5;
+      transition: all 0.4s;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+// Displaying the Active tab
+.slide__tabs .slide__tabs--active {
+  border-radius: 0.8rem;
+  background-color: $color-tertiary;
+  width: 4rem;
+  opacity: 1;
+}
+
+// // Class add to the slider
+// .slider .slide__active {
+//   display: grid;
+// }

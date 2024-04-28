@@ -1,0 +1,269 @@
+.user-section {
+  background-color: #eeeeed9e;
+}
+.user {
+  display: flex;
+  flex-direction: column;
+  &__top {
+    padding: 7rem 0rem;
+    background-color: $color-primary-dark;
+    @include respond(phone745){
+    padding: 6rem 0rem;
+    }
+    @include respond(min-phone){
+    padding: 5rem 0rem;
+
+    }
+  }
+  &__main {
+    // padding: 1rem;
+    // background-color: black;
+  }
+  &__profile {
+    width: 80%;
+    background-color: $color-white;
+    box-shadow: 0 2px 4.5px rgb(194, 191, 191);
+    border-radius: 1rem;
+    gap: 2rem;
+    transform: translateY(-5rem);
+    @include respond(phone745) {
+      width: 100%;
+      border-radius: 0rem;
+    }
+
+    &--info {
+      gap: 3rem;
+    }
+    &--image {
+      position: relative;
+      // padding: 3rem 6rem;
+      // padding-bottom: 1rem;
+
+      img {
+        position: absolute;
+        padding: 0.4rem;
+        // background-color: $color-tertiary;
+        top: 0;
+        left: 45%;
+        width: 12rem;
+        height: 12rem;
+        border-radius: 50%;
+        transform: translateY(-6rem);
+        cursor: pointer;
+        @include respond(phone745) {
+          left: 5%;
+          width: 10rem;
+          height: 10rem;
+        transform: translateY(-5rem);
+
+        }
+        @include respond(min-phone) {
+          width: 8rem;
+          height: 8rem;
+        transform: translateY(-4rem);
+
+        }
+      }
+      button {
+        margin-top: 3rem;
+        margin-right: 8rem;
+        float: right;
+        padding: 1rem 2.5rem;
+        background-color: $color-tertiary-text;
+        font-size: 1.8rem;
+        font-weight: 700;
+        border-radius: 0.6rem;
+        border: none;
+        color: $color-white;
+        cursor: pointer;
+        transition: all 0.3s;
+        @include respond(phone745) {
+          margin-top: 2rem;
+          margin-right: 5rem;
+        }
+
+        &:hover {
+          transform: scale(1.03);
+        }
+        &:active {
+          transform: scale(0.96);
+        }
+      }
+    }
+    &--name {
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+
+      @include respond(phone745) {
+        align-items: flex-start;
+        justify-content: center;
+        margin-left: 2rem;
+      }
+
+      h1 {
+        font-size: 3rem;
+        font-weight: 600;
+      }
+      p {
+        font-size: 2rem;
+        font-weight: 400;
+      }
+    }
+    &--others {
+      gap: 3rem;
+      padding-bottom: 2rem;
+      @include respond(phone745) {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-left: 2rem;
+      }
+      @include respond(min-phone) {
+        display: flex;
+        // align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+      }
+
+      span {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 1.6rem;
+
+        &:last-child {
+          cursor: pointer;
+
+          &:hover {
+            color: $color-tertiary;
+          }
+        }
+      }
+    }
+    &--personal {
+      border-top: 1px solid rgba(176, 172, 172, 0.329);
+      padding: 2rem 0rem;
+      @include respond(min-phone) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-left: 2rem;
+      }
+
+      &-info {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        @include respond(min-phone) {
+          display: flex;
+          align-items: flex-start;
+        }
+
+        span {
+          font-size: 1.7rem;
+          color: $color-black-light;
+        }
+        p {
+          font-size: 1.8rem;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  &__activities {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &--main {
+      display: grid;
+      grid-template-columns: 35rem 1fr;
+      justify-content: center;
+      column-gap: 2rem;
+      width: 80%;
+      // box-shadow: 0 2px 4.5px rgb(194, 191, 191);
+      border-radius: 1rem;
+      transform: translateY(-2rem);
+      padding: 1rem 0.5rem;
+      @include respond(phone745) {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        border-radius: 0rem;
+      }
+
+      &-left {
+        padding: 1rem 1rem;
+        gap: 1.5rem;
+        @include respond(phone745) {
+          display: none;
+        }
+      }
+      &-right {
+        padding: 0rem 0rem;
+
+        // gap: 0.5rem;
+        border-radius: 1rem;
+        background-color: $color-white;
+        transform: translateY(1rem);
+        @include respond(phone745) {
+          border-radius: 0rem;
+        }
+      }
+    }
+    &--badges {
+      border-radius: 0.5rem;
+      gap: 0.4rem;
+      background-color: $color-white;
+      // background-color: red;
+
+      h1 {
+        font-size: 2rem;
+        border-bottom: 1px solid rgba(170, 167, 167, 0.51);
+        padding: 1.7rem 0.5rem;
+      }
+      p {
+        font-size: 1.6rem;
+        padding: 1.5rem 0.5rem;
+      }
+      i {
+        font-size: 5.5rem;
+        color: $color-accent;
+        padding: 1rem 2rem;
+      }
+    }
+    &--comment {
+      border-bottom: 1px solid rgb(219, 216, 216);
+      padding: 1rem 1rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgba(201, 197, 197, 0.401);
+      }
+      h1 {
+        font-size: 1.8rem;
+        font-weight: 600;
+
+        @include respond(phone745) {
+          font-size: 2rem;
+
+          margin-bottom: 1rem;
+        }
+      }
+      p {
+        font-size: 1.6rem;
+      }
+
+      &-1 {
+        border-bottom: 1px solid rgb(219, 216, 216);
+        padding: 1rem 1rem;
+        h1 {
+          font-size: 2.5rem;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

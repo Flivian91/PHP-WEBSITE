@@ -1,0 +1,36 @@
+// /Animation For the Faq
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+@keyframes fadedrop {
+  from {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+
+@keyframes imageSlider {
+  from {
+    transform: translateX(0rem);
+
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-10rem);
+    opacity: 0;
+   
+  }
+  
+}

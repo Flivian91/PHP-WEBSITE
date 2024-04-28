@@ -3,15 +3,46 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
+
+html {
+  scroll-behavior: smooth;
   font-size: 62.5%;
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+
+  @include respond(phone) {
+    font-size: 50%;
+  }
+  @include respond(big-desktop) {
+    font-size: 75%;
+  }
+}
+
+::-webkit-scrollbar {
+  background-color: #b8b4b4;
+  width: 1rem;
+  border-radius: 0.4rem;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $color-primary-dark;
+  border-radius: .5rem;
+}
+
+body {
   // background-color: $color-primary-background-light;
-  color: $color-text;
+  // color: $color-text;
   position: relative;
-  padding-bottom: 200rem;
+  // padding-bottom: 20rem;
+  font-family: "Poppins", sans-serif;
 }
 a {
   text-decoration: none;
   display: inline-block;
 }
-
+img {
+  max-width: 100%;
+}

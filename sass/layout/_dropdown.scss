@@ -1,0 +1,20 @@
+.dropdown-section {
+  background-color: transparent;
+  // padding-bottom: 3rem;
+  position: absolute;
+  top: 5.6rem;
+  left: 9rem;
+  display: none;
+}
+
+.activeDropdown.dropdown-section {
+  display: block;
+  animation: fadedrop 0.4s ease-in-out;
+}
+.icon-drop {
+  transition: all 0.5s;
+  // transform: rotate(180deg);
+}
+// .activeDropdown.dropdown-section .icon-drop{
+//   transform: rotate(180deg);
+// }

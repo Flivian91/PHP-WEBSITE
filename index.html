@@ -3,25 +3,89 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Community Compassion: Empowering People to Help People</title>
+    <meta
+      name="description"
+      content="Join our vibrant online community dedicated to fostering kindness, support, and empowerment. Discover resources, stories, and opportunities to make a positive difference in the lives of others. Together, we can create a world where every act of kindness counts. Join us in spreading love, compassion, and hope."
+    />
+    <meta
+      name="keywords"
+      content="community, compassion, kindness, support, empowerment, helping others, volunteerism, social impact, positive change, unity"
+    />
+    <meta name="author" content="Flivian Mwirigi Front-end Developer" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <title>Document</title>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <title>PHP Modern Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="/img/php logo resized.png" />
   </head>
   <body>
+    <!-- Menu Section -->
+    <div class="menu-section hidden">
+      <div class="menu">
+        <!-- Exit button -->
+        <span class="menu__exit flex-row__center">&times;</span>
+        <div class="menu__nav flex-column">
+          <div onclick="closeMenu()" class="menu__nav--item">
+            <a href="#">Home</a>
+          </div>
+          <div id="link__solution" class="menu__nav--item">
+            <a href="#">How we Work</a>
+          </div>
+          <div id="link__network" class="menu__nav--item">
+            <a href="#">PHP Network</a>
+          </div>
+          <div id="link__about" class="menu__nav--item">
+            <a href="#">About Us</a>
+          </div>
+          <div onclick="chatMeFun(),closeMenu()" class="menu__nav--item">
+            <a href="#">Live Chat</a>
+          </div>
+          <div class="menu__buttons">
+            <a class="menu-btn menu__signin" href="signin.html">Signin</a>
+            <a class="menu-btn menu__join" href="signin.html">Join Community</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="overlay menu__overlay hidden"></div>
     <header class="header">
-      <div onscroll="console.log('hello')" class="hero">
+      <div class="preloader">
+        <div id="preloader"></div>
+        <!-- <p>Loading PHP Website...</p> -->
+      </div>
+
+      <!-- <div class="record-submitted">
+        <p>Record Submitted Successfully!😘</p>
+      </div> -->
+      <div class="hero1">
         <div class="nav flex-row__space-btwn">
           <div class="nav__left flex-row__start">
             <div class="nav__left--logo flex-row__start">
               <a href="#">
-                <img
-                  title="Refresh"
-                  src="/img/php logo resized.png"
-                  alt="PHP logo"
-                />
+                <img title="Refresh" src="image/php logo.png" alt="PHP logo" />
               </a>
               <span>
                 <span class="nav__left--logo-1">P</span>
@@ -30,11 +94,34 @@
               </span>
             </div>
             <div class="nav__left--navbar flex-row__center">
-              <nav class="nav__navbar flex-row__start">
+              <nav id="nav-section" class="nav__navbar flex-row__start">
                 <a href="#" class="nav__navbar--items">Home</a>
-                <a href="#" class="nav__navbar--items"> Features </a>
-                <a href="#" class="nav__navbar--items">Solutions</a>
-                <a href="#" class="nav__navbar--items">Resources</a>
+                <a
+                  id="link__solution"
+                  href="#"
+                  class="nav__navbar--items nav__navbar--items-2"
+                  >How we work
+                </a>
+                <a
+                  id="link__network"
+                  href="#"
+                  class="nav__navbar--items nav__navbar--items-3"
+                  >PHP Network
+                </a>
+                <a
+                  id="link__about"
+                  href="#"
+                  class="nav__navbar--items nav__navbar--items-2"
+                >
+                  About Us
+                </a>
+                <a
+                  id="link__chat"
+                  onclick="chatMeFun()"
+                  href="#"
+                  class="nav__navbar--items nav__navbar--items-3"
+                  >Live Chat
+                </a>
               </nav>
             </div>
           </div>
@@ -42,9 +129,11 @@
             <div id="search" class="nav__right--search">
               <i class="fa fa-search" aria-hidden="true"></i>
             </div>
-            <div class="nav__right--login flex-row__center">
-              <a href="#" class="btn btn__signin">Signin</a>
-              <a href="#" class="btn btn__join"
+            <div id="nav-btn" class="nav__right--login flex-row__center">
+              <a href="signin.html" id="signin-btn" class="btn btn__signin"
+                >Signin</a
+              >
+              <a href="signin.html" id="join-btn" class="btn btn__join"
                 >Join
                 <span>
                   <span class="nav__left--logo-1">P</span>
@@ -54,12 +143,15 @@
                 Community</a
               >
             </div>
+            <div class="menu__icons">
+              <i id="menu-icon" class="fa fa-bars" aria-hidden="true"></i>
+            </div>
           </div>
         </div>
 
         <!-- Search bar Div -->
         <div class="search search-cancel">
-          <div class="nav__left--logo flex-row__start">
+          <div id="nav-search" class="nav__left--logo flex-row__start">
             <a href="#">
               <img
                 title="Refresh"
@@ -82,7 +174,7 @@
               id="input-search"
               maxlength="60"
               type="text"
-              placeholder="Find Anything(ie. Teams, Community, or Reset Password)"
+              placeholder="Search here..."
             />
             <div id="cancel" class="search__input-cancel">&times;</div>
           </div>
@@ -93,81 +185,282 @@
         </div>
       </div>
     </header>
-    <!-- DropDown menu -->
+    <!-- Hero Section Of the PHP Website -->
+    <section class="hero-section">
+      <div id="hero-section" class="hero grid-2-col">
+        <div class="hero__decription flex-column">
+          <h1 class="hero__description--heading">
+            We’re changing the way people connect.
+          </h1>
+          <p class="hero__description--para">
+            Welcome to People Helping People - a platform dedicated to fostering
+            connections and making a positive impact.
+          </p>
+          <div
+            id="hero-description"
+            class="hero__description--btn flex-row__start"
+          >
+            <div class="nav__right--login flex-row__center">
+              <a href="signin.html" id="signin-btn-hero" class="btn btn__signin"
+                >Signin</a
+              >
+              <a href="signin.html" id="join-btn-hero" class="btn btn__join"
+                >Join
+                <span>
+                  <span class="nav__left--logo-1">P</span>
+                  <span class="nav__left--logo-2">H</span>
+                  <span class="nav__left--logo-3">P</span>
+                </span>
+                Community</a
+              >
+            </div>
+          </div>
+          <div class="hero__students flex-row__start">
+            <div class="hero__students--image flex-row__start">
+              <img src="img/customers/customer-1.jpg" alt="Customer photo" />
+              <img src="img/customers/customer-2.jpg" alt="Customer photo" />
+              <img src="img/customers/customer-3.jpg" alt="Customer photo" />
+              <img src="img/customers/customer-4.jpg" alt="Customer photo" />
+              <img src="img/customers/customer-5.jpg" alt="Customer photo" />
+              <img src="img/customers/customer-6.jpg" alt="Customer photo" />
+            </div>
+            <span><strong>2500+</strong> Students On Program</span>
+          </div>
+        </div>
+        <figure id="hero-image" class="hero__gallery grid-3-col">
+          <figcaption class="hero__image hero__image-1">
+            <img src="image/degree3.jpg" alt="Php graduate image" />
+            <img src="image/degree2.jpg" alt="Php graduate image" />
+          </figcaption>
+          <figcaption class="hero__image hero__image-2">
+            <img src="image/degree5.jpg" alt="Php graduate image" />
+            <img src="image/degree4.jpg" alt="Php graduate image" />
+          </figcaption>
+          <figcaption class="hero__image hero__image-3">
+            <img src="image/degree6.jpg" alt="Php graduate image" />
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+    <!-- Introduction Section of PHP Website -->
+    <section class="intro-section">
+      <div class="intro flex-column">
+        <div class="intro__heading flex-column">
+          <div class="intro__heading--text flex-column">
+            <span>Welcome</span>
+            <h1 class="primary__heading-h1">
+              Welcome to People Helping People
+            </h1>
+          </div>
 
-    <!-- SignIn Form -->
-    <section class="container">
-      <div class="signin-container">
-        <div class="signin-descriptions">
-          <img
-            src="/img/php logo resized.png"
-            alt="MeccaTech Logo"
-            width="60%"
-          />
-          <h1>Sign in</h1>
-        </div>
-        <div class="signin-form">
-          <form class="form" action="home.html" method="post">
-            <div class="email-section">
-              <label for="email">Email address</label>
-              <input type="email" id="email" required name="email" />
+          <div id="intro-section" class="intro__heading--details grid-3-col">
+            <div class="intro__heading--details-part flex-column">
+              <ion-icon name="people-circle"></ion-icon>
+              <h2 class="primary__heading-h2">About Us</h2>
+              <p>
+                We are dedicated to fostering compassion, empowerment, and
+                community connection.
+              </p>
+              <a class="" href="#"
+                >Learn More<i class="fa fa-hand-o-right" aria-hidden="true"></i
+              ></a>
             </div>
-            <div class="password-section">
-              <label for="password">Password</label>
-              <input type="password" id="password" name="password" required />
+            <div class="intro__heading--details-part flex-column">
+              <ion-icon name="chatbubbles-outline"></ion-icon>
+              <h2 class="primary__heading-h2">Contact Us</h2>
+              <p>
+                Need assistance or have questions? Contact our team to get the
+                support you need.
+              </p>
+              <a href="#"
+                >Learn More<i class="fa fa-hand-o-right" aria-hidden="true"></i
+              ></a>
             </div>
-            <div class="checkbox-section">
-              <div class="checkbox">
-                <input type="checkbox" id="checkbox" name="checkbox" />
-                <label class="remember" for="checkbox">Remember me</label>
-              </div>
-              <div class="forget-password">
-                <a href="#">Forget Password?</a>
-              </div>
+            <div class="intro__heading--details-part flex-column">
+              <ion-icon name="book-outline"></ion-icon>
+              <h2 class="primary__heading-h2">Education</h2>
+              <p>
+                Explore educational resources and opportunities to learn and
+                grow with php Community.
+              </p>
+              <a href="#"
+                >Learn More<i class="fa fa-hand-o-right" aria-hidden="true"></i
+              ></a>
             </div>
-            <div class="signin-btn">
-              <input type="submit" value="Sign in" name="" />
-            </div>
-          </form>
-          <div class="continue-with">
-            <p></p>
-            <h2>Or continue with</h2>
-            <p></p>
-          </div>
-          <div class="option-signin">
-            <a href="#">
-              <ion-icon class="google-icon" name="logo-google"></ion-icon>
-              Google
-            </a>
-            <a href="#">
-              <ion-icon class="google-icon" name="logo-github"></ion-icon>
-              GitHub
-            </a>
           </div>
         </div>
-        <div class="not-member">
-          <p>Not a member?</p>
-          <a href="#">Sign up for free</a>
+        <div class="intro__body grid-2-col">
+          <div class="intro__body--details flex-column">
+            <h1 class="primary__heading-h1">Our Mission</h1>
+            <p>
+              At People Helping People, our mission is to create a world where
+              every individual feels valued, supported, and empowered to make a
+              positive impact.
+            </p>
+            <div class="intro__body--question">
+              <div class="intro__body--qns">
+                <div class="intro__body--tages flex-row__space-btwn">
+                  <p class="para">How We Help</p>
+                  <ion-icon name="chevron-down-outline"></ion-icon>
+                </div>
+                <div class="intro__body--text">
+                  <p>
+                    We help individuals in various ways, including providing
+                    access to essential resources, offering support services,
+                    and fostering community connections. Our goal is to empower
+                    people to overcome challenges and thrive in their lives.
+                  </p>
+                </div>
+              </div>
+
+              <div class="intro__body--qns">
+                <div class="intro__body--tages flex-row__space-btwn">
+                  <p class="para">Our Values</p>
+                  <ion-icon name="chevron-down-outline"></ion-icon>
+                </div>
+                <div class="intro__body--text">
+                  <p>
+                    Our values guide everything we do. We prioritize empathy,
+                    inclusivity, integrity, and collaboration in all our
+                    interactions and initiatives. These values drive us to
+                    create positive change and make a meaningful difference in
+                    people's lives.
+                  </p>
+                </div>
+              </div>
+              <div class="intro__body--qns">
+                <div class="intro__body--tages flex-row__space-btwn">
+                  <p class="para">Join Our Community</p>
+                  <ion-icon name="chevron-down-outline"></ion-icon>
+                </div>
+                <div class="intro__body--text">
+                  <p>
+                    Become a part of our community and join us in our mission to
+                    help others. Whether you're looking to volunteer, seek
+                    support, or simply connect with like-minded individuals,
+                    there's a place for you here at People Helping People. <br>
+                    <a class="menu-btn menu__join" href="signin.html"
+                      >Join Community</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="intro__body--image">
+            <img src="image/student learn1.jpg" alt="Degree Images" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- How we Work Section of the PHP website -->
+    <section id="section__work" class="works-section">
+      <div class="works flex-column">
+        <div class="works__intro flex-row__center">
+          <span>How we Work</span>
+        </div>
+        <div class="works__heading grid-2-col">
+          <div class="works__heading--intro flex-column">
+            <h1 class="primary__heading-h1">Our Model</h1>
+          </div>
+          <div class="works__heading--para">
+            <p>
+              At People Helping People, we believe in a model that prioritizes
+              collaboration, empowerment, and inclusivity. Our approach is
+              designed to facilitate meaningful connections and empower
+              individuals to make a positive impact in their communities.
+            </p>
+          </div>
+        </div>
+        <div class="works__body grid-4-col">
+          <div class="works__cards flex-column">
+            <div class="works__cards--image">
+              <img src="image/select.jpg" alt="Student Image Showing select" />
+            </div>
+            <div class="works__cards--details flex-column">
+              <h1>Select<ion-icon name="people-circle"></ion-icon></h1>
+              <p>
+                Our Select program focuses on matching individuals with the
+                right opportunities to volunteer and contribute to causes they
+                are passionate about.
+              </p>
+              <div>
+                <a class="btn-works" href="#">Get Started Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="works__cards flex-column">
+            <div class="works__cards--image">
+              <img
+                src="image/accelerate.jpg"
+                alt="Student Image Showing select"
+              />
+            </div>
+            <div class="works__cards--details flex-column">
+              <h1>Accelerate<ion-icon name="people-circle"></ion-icon></h1>
+              <p>
+                Our Accelerate program provides support and resources for
+                individuals and organizations looking to scale their impact and
+                accelerate positive change.
+              </p>
+              <div>
+                <a class="btn-works" href="#">Join Community</a>
+              </div>
+            </div>
+          </div>
+          <div class="works__cards flex-column">
+            <div class="works__cards--image">
+              <img
+                src="image/education.jpg"
+                alt="Student Image Showing select"
+              />
+            </div>
+            <div class="works__cards--details flex-column">
+              <h1>Educate<ion-icon name="people-circle"></ion-icon></h1>
+              <p>
+                Our Educate program offers a range of educational resources and
+                training opportunities to empower individuals with the knowledge
+                and skills.
+              </p>
+              <div>
+                <a class="btn-works" href="#">Try For free...</a>
+              </div>
+            </div>
+          </div>
+          <div class="works__cards flex-column">
+            <div class="works__cards--image">
+              <img src="image/funded.jpg" alt="Student Image Showing select" />
+            </div>
+            <div class="works__cards--details flex-column">
+              <h1>Fund<ion-icon name="people-circle"></ion-icon></h1>
+              <p>
+                Our Fund program connects donors with impactful projects and
+                initiatives in need of financial support, ensuring that
+                resources are allocated.
+              </p>
+              <div>
+                <a class="btn-works" href="#">Apply to Program</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- COOKIES -->
     <!-- Coookie Section -->
+    <!-- Style removed temporaly -->
     <div class="cookies cookies-cancel">
       <div class="cookies__details">
         <p>
           This website uses cookies to enhance user experience and to analyze
-          performance and traffic on our website. We also share information
-          about your use of our site with our social media, advertising and
-          analytics partners.<a onclick="managerCookies()" href="#"
-            >More Info</a
-          >
+          performance and traffic on our website.
+          <a onclick="managerCookies()" href="#">More Info</a>
         </p>
       </div>
       <div class="cookies__btn flex-column">
         <a href="#" id="btn__cookies--accept" class="btn btn__join"
-          >Accept All Cookies</a
+          >Accept Cookies</a
         >
         <a href="#" id="btn__cookies--decline" class="btn btn__join"
           >Decline Cookies</a
@@ -276,11 +569,412 @@
         </div>
       </div>
     </section>
+    <section class="chat">
+      <div id="mychat" class="chat__icon">
+        <p class="chat__icon--text">
+          <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+        </p>
+      </div>
+    </section>
+    <!-- Chat Section -->
+    <section class="chatme hidden"></section>
+    <div class="chat__area flex-column hidden">
+      <div class="chat__area--text flex-column">
+        <p class="hi-para">
+          Hi there. I`m an PHP Chatbot. I`ll connect you to the right resource.
+        </p>
+        <p class="select-para">Select "Start" to begin.</p>
+      </div>
+      <div class="chat__area--sender">
+        <!-- <div class="chat__area--sender-mess">
+          <span>Read</span>
+          <p class="chat__area-message">Hi, how are you bot</p>
+        </div> -->
+      </div>
+      <div class="addmin-message">
+        <!-- <div class="chat__area--text flex-column">
+          <p class="hi-para">
+            Hi there. I`m an PHP Chatbot. I`ll connect you to the right resource.
+          </p>
+          <p class="select-para">Select "Start" to begin.</p>
+        </div> -->
+      </div>
+    </div>
+    <div class="chat__message hidden">
+      <input
+        id="message"
+        type="text"
+        placeholder="Type your message..."
+        autofocus
+        autocomplete="off"
+      />
+      <span class="chat__message--send"
+        ><i class="fa fa-paper-plane" aria-hidden="true"></i
+      ></span>
+      <!-- <span class="chat__message--arrow">&rarr;</span> -->
+    </div>
 
+    <!-- Network Section Of the php community -->
+    <section class="network-section">
+      <div class="network">
+        <div class="works__intro flex-row__center">
+          <span>Network</span>
+        </div>
+        <div class="works__heading grid-2-col">
+          <div class="works__heading--intro flex-column">
+            <h1 class="primary__heading-h1">Our Community</h1>
+          </div>
+          <div class="works__heading--para flex-column">
+            <p>
+              Our network is defined by the vibrant community of individuals who
+              share a common goal of making a positive impact on society.
+              Together, we collaborate, innovate, and inspire change.
+            </p>
+            <div class="works__heading--para flex-row__center">
+              <a class="btn-meet" href="#">Meet Our Fellow Members</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider section -->
+
+        <div class="slider">
+          <!-- Slide Back Btn -->
+          <div class="slide__navigate slide__previous flex-row__center">
+            <ion-icon
+              id="slide__previous"
+              name="arrow-back-circle-outline"
+            ></ion-icon>
+          </div>
+          <div class="slide slide--1">
+            <div class="slide__main">
+              <div class="slide__main--image">
+                <img src="image/work8.jpg" alt="Worker image" />
+              </div>
+              <div class="slide__main--info flex-column">
+                <h1>HR Manager</h1>
+                <p>Sarah Davis</p>
+                <div class="slide__quote">
+                  <blockquote>
+                    "Education is not the filling of a pail, but the lighting of
+                    a fire."
+                  </blockquote>
+                  <a href="#">Read More</a>
+                </div>
+              </div>
+              <!-- Tabs Side -->
+            </div>
+          </div>
+          <div class="slide slide--2">
+            <div class="slide__main">
+              <div class="slide__main--image">
+                <img src="image/work3.jpg" alt="Worker image" />
+              </div>
+              <div class="slide__main--info flex-column">
+                <h1>Marketing Manager</h1>
+                <p>John Smith</p>
+                <div class="slide__quote">
+                  <blockquote>
+                    "Education is the passport to the future, for tomorrow
+                    belongs to those who prepare for it today."
+                  </blockquote>
+                  <a href="#">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide slide--3">
+            <div class="slide__main">
+              <div class="slide__main--image">
+                <img src="image/work4.jpg" alt="Worker image" />
+              </div>
+              <div class="slide__main--info flex-column">
+                <h1>Sales Director</h1>
+                <p>Emily Johnson</p>
+                <div class="slide__quote">
+                  <blockquote>
+                    "The function of education is to teach one to think
+                    intensively and to think critically. Intelligence plus
+                    character - that is the goal of true education."
+                  </blockquote>
+                  <a href="#">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide slide--4">
+            <div class="slide__main">
+              <div class="slide__main--image">
+                <img src="image/work6.jpg" alt="Worker image" />
+              </div>
+              <div class="slide__main--info flex-column">
+                <h1>Chief Technology Officer</h1>
+                <p>Michael Brown</p>
+                <div class="slide__quote">
+                  <blockquote>
+                    "The roots of education are bitter, but the fruit is sweet."
+                  </blockquote>
+                  <a href="#">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide Next Btn -->
+          <div class="slide__tabs flex-row__center">
+            <!-- <button class="slide__tab" data-slide="1"></button>
+            <button
+              class="slide__tab slide__tabs--active"
+              data-slide="2"
+            ></button>
+            <button class="slide__tab" data-slide="3"></button>
+            <button class="slide__tab" data-slide="4"></button> -->
+          </div>
+          <div class="slide__navigate slider__next flex-row__center">
+            <ion-icon
+              id="slide__next"
+              name="arrow-forward-circle-outline"
+            ></ion-icon>
+          </div>
+        </div>
+
+        <!-- <div class="network__image grid-4-col-special">
+        
+          <div class="network__change">
+            <ion-icon
+              id="previous-image"
+              name="arrow-back-circle-outline"
+            ></ion-icon>
+            <ion-icon
+              id="next-image"
+              name="arrow-forward-circle-outline"
+            ></ion-icon>
+          </div>
+          <div class="body1 network__image--body main-image">
+            <div class="network__image--picture p1">
+              <img
+                id="image1"
+                class="image1"
+                src="/image/work1.jpg"
+                alt="Profile Image for the People Involved With PHP"
+              />
+            </div>
+            <div class="network__image--details">
+              <h1 class="name-image">Aurora Blake</h1>
+              <div class="network__image--info grid-2-col">
+                <div class="network__image--info-left flex-column">
+                  <span class="role">Role</span>
+                  <p class="work-role">C.E.O</p>
+                </div>
+                <div class="network__image--info-middle flex-column">
+                  <span class="class">Class</span>
+                  <p>18</p>
+                </div>
+                <div class="network__image--info-right flex-column">
+                  <span class="company">Company</span>
+                  <p class="work-company">MaC Venture Capital</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="network__image--body">
+            <div class="network__image--picture">
+              <img
+                id="image2"
+                src="/image/work6.jpg"
+                alt="Profile Image for the People Involved With PHP"
+              />
+            </div>
+            <div class="network__image--details">
+              <h1 class="work-name">Asher Nguyen</h1>
+              <div class="network__image--info grid-2-col">
+                <div class="network__image--info-left">
+                  <span>Role</span>
+                  <p class="work-role">Product Manager</p>
+                </div>
+                <div class="network__image--info-middle">
+                  <span>Class</span>
+                  <p>18</p>
+                </div>
+                <div class="network__image--info-right">
+                  <span>Company</span>
+                  <p class="work-company">MaC Venture Capital</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="network-last-image" class="network__image--body">
+            <div class="network__image--picture">
+              <img
+                id="image3"
+                src="/image/work4.jpg"
+                alt="Profile Image for the People Involved With PHP"
+              />
+            </div>
+            <div class="network__image--details">
+              <h1 class="work-name">River Thompson</h1>
+              <div class="network__image--info grid-2-col">
+                <div class="network__image--info-left">
+                  <span>Role</span>
+                  <p class="work-role">Sales Manager</p>
+                </div>
+                <div class="network__image--info-middle">
+                  <span>Class</span>
+                  <p>18</p>
+                </div>
+                <div class="network__image--info-right">
+                  <span>Company</span>
+                  <p class="work-company">MaC Venture Capital</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </section>
+
+    <!-- Chat Section -->
+    <section class="footer-section">
+      <div class="footer flex-column">
+        <div class="footer__subscribe--form">
+          <div class="footer__subscribe">
+            <div class="footer__subscribe--left flex-column">
+              <h1>Subscribe</h1>
+              <p>
+                Stay updated with our latest news and events by subscribing to
+                our newsletter.
+              </p>
+            </div>
+            <div class="footer__subscribe--right">
+              <form action="#" class="signin__right--form flex-column">
+                <div class="signin__right--form-email flex-column">
+                  <input
+                    class="signin__input"
+                    type="email"
+                    id="sign__email-footer"
+                    name="email"
+                    required
+                  />
+                  <label for="sign__email-footer" class="signin__input--label"
+                    >Email</label
+                  >
+                </div>
+                <div class="signin__right--form-email flex-column">
+                  <input
+                    class="signin__input"
+                    type="password"
+                    id="signin__password-footer"
+                    name="password"
+                    required
+                  />
+                  <label
+                    for="signin__password-footer"
+                    class="signin__input--label"
+                    >Password</label
+                  >
+                </div>
+                <div class="signin__btn btn btn__join">
+                  <input type="submit" value="Submit" name="submit" />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="footer__join-community flex-row__space-btwn">
+          <div class="nav__left--logo flex-row__start">
+            <a href="#">
+              <img title="Refresh" src="image/php logo.png" alt="PHP logo" />
+            </a>
+            <span class="flex-column">
+              <span class="nav__left--logo-1">People</span>
+              <span class="nav__left--logo-2">Helping</span>
+              <span class="nav__left--logo-3">People</span>
+            </span>
+          </div>
+          <div class="works__heading--para flex-row__center">
+            <a class="btn-meet" href="signin.html"
+              >Join Us
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </a>
+          </div>
+        </div>
+        <div class="footer__nav grid-4-col">
+          <div class="footer__nav--program flex-column">
+            <h2>Programs</h2>
+            <div class="footer__nav--items flex-column">
+              <a href="#"> Volunteer Programs </a>
+              <a href="#">Educational Workshops</a>
+              <a href="#">Community Events</a>
+              <a href="#">Fundraising Campaigns</a>
+            </div>
+          </div>
+          <div class="footer__nav--program flex-column">
+            <h2>Community</h2>
+            <div class="footer__nav--items flex-column">
+              <a href="#"> Discussion Forums </a>
+              <a href="#">Volunteer Stories</a>
+              <a href="#">Success Stories</a>
+              <a href="#">Community Guidelines</a>
+            </div>
+          </div>
+          <div class="footer__nav--program flex-column">
+            <h2>Resources</h2>
+            <div class="footer__nav--items flex-column">
+              <a href="#"> Resource Library </a>
+              <a href="#">Training Materials</a>
+              <a href="#">FAQs</a>
+              <a href="#">Useful Links</a>
+            </div>
+          </div>
+          <div class="footer__nav--program flex-column">
+            <h2>About</h2>
+            <div class="footer__nav--items flex-column">
+              <a href="#"> Our Mission </a>
+              <a href="#">Our Team</a>
+              <a href="#">Contact Us</a>
+              <a href="#">Terms of Service</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__policy">
+          <div class="footer__policy--social">
+            <div class="social-media flex-row__start">
+              <span
+                ><i class="fa fa-whatsapp whatsapp" aria-hidden="true"></i
+              ></span>
+              <span
+                ><i
+                  class="fa fa-facebook-square facebook"
+                  aria-hidden="true"
+                ></i
+              ></span>
+              <i class="fa fa-instagram instagram" aria-hidden="true"></i>
+              <i class="fa fa-twitter twitter" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div>
+            <span class="footer__policy-powered"
+              >Powered by <a href="#">PHP</a> <strong>2024</strong></span
+            >
+          </div>
+          <div class="footer__policy--condition">
+            <span> Privacy </span>
+            <span>&#124;</span>
+            <span>Terms</span>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Javascript Files -->
+    <script src="js/script.js"></script>
     <script src="js/search.js"></script>
     <script src="js/cookies.js"></script>
     <script src="js/cookies-manager.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/faq.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/preloader.js"></script>
   </body>
 </html>
 
@@ -288,9 +982,3 @@
 Primary color #59FFA0 
 Secondary color #297045
 Tertiary color #B2FFD6-->
-
-<!-- 
-  <i class="fa fa-cloud-upload" aria-hidden="true"></i> upload icon
-  <i class="fa fa-cloud-download" aria-hidden="true"></i>
-  <i class="fa fa-times" aria-hidden="true"></i> close icon
- -->

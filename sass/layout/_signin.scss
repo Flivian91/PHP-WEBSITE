@@ -1,0 +1,21 @@
+.signin-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // // overflow: hidden;
+  // height: 100vh;
+  padding: 3rem 2rem;
+  display: none;
+  // width: 100%;
+  background-color: rgb(213, 216, 216);
+  @include respond(tab-port) {
+    padding: 3rem 2rem;
+  }
+  @include respond(phone) {
+    padding: 3rem 1rem;
+  }
+}
+
+body .open {
+  display: none;
+}

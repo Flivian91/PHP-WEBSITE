@@ -1,6 +1,20 @@
-.hero {
-  margin-top: 0.5rem;
-  padding-bottom: 20rem;
-  height: 100vh;
-  // background-color: $color-background-final;
+// .hero1 {
+//   // margin-top: 0.5rem;
+//   // padding-bottom: 5rem;
+//   // height: 100vh;
+//   // background-color: $color-background-final;
+// }
+.hero-section {
+  margin: 0;
+  // @include postion-section;
+}
+
+
+.hero__image {
+  margin: 0;
+  // width: 200px;
+  // img {
+  //   width: 20rem;
+  //   height: auto;
+  // }
 }

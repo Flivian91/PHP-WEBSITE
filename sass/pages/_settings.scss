@@ -1,0 +1,368 @@
+// .setting-section {
+//   // background-color: green;
+//   padding: 2rem 15rem;
+
+//   @include respond(tab-port1100) {
+//     padding: 2rem 12rem;
+//   }
+//   @include respond(tab-port) {
+//     padding: 2rem 5rem;
+//   }
+//   @include respond(phone745) {
+//     padding: 2rem 2rem;
+//   }
+// }
+
+// Displaying the current active tab
+.settings .settings__active {
+  //  This class shows current selected element
+  background-color: $color-white;
+  box-shadow: 0 2px 3px #0000002b;
+  cursor: pointer;
+  &:hover {
+    background-color: $color-white;
+    color: blue;
+  }
+
+  a {
+    &:link,
+    &:visited {
+      font-size: 1.7rem;
+
+      &:hover {
+        color: blue;
+      }
+    }
+  }
+}
+.settings {
+  display: grid;
+  grid-template-columns: 25rem 1fr;
+  padding: 2rem 15rem;
+  @include respond(tab-port1100) {
+    padding: 2rem 12rem;
+  }
+  @include respond(tab-port) {
+    padding: 2rem 5rem;
+  }
+  @include respond(phone745) {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 2rem 2rem;
+  }
+  column-gap: 2rem;
+
+  &__left {
+    gap: 0.3rem;
+    @include respond(phone745) {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__tabs {
+    // background-color: red;
+    padding: 0.8rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: all 0.2s;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    @include respond(min-phone) {
+      padding: 0.8rem 1rem;
+    }
+
+    &:hover {
+      background-color: $color-primary-dark;
+    }
+
+    span {
+      font-size: 2rem;
+      color: $color-tertiary;
+    }
+
+    a {
+      &:link,
+      &:visited {
+        color: $color-black;
+        font-size: 1.6rem;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__container {
+    gap: 2rem;
+    display: none;
+
+    &--name {
+      a {
+        &:link,
+        &:visited {
+          font-size: 2.5rem;
+          color: blue;
+          font-weight: 700;
+        }
+      }
+    }
+    &--media {
+      background-color: $color-white;
+      border-radius: 0.5rem;
+      padding: 3rem 1.5rem;
+      padding-right: 25rem;
+      gap: 1rem;
+
+      @include respond(tab-port1100) {
+        padding-right: 15rem;
+      }
+      @include respond(tab-port) {
+        padding-right: 10rem;
+      }
+      @include respond(phone745) {
+        padding-right: 20rem;
+      }
+      @include respond(phone) {
+        padding-right: 10rem;
+      }
+      @include respond(min-phone) {
+        padding-right: 2rem;
+      }
+
+      a {
+        &:link,
+        &:visited {
+          font-size: 2rem;
+          color: $color-white;
+          font-weight: 700;
+          padding: 0.7rem 2.5rem;
+          background-color: $color-tertiary-text;
+          border-radius: 0.5rem;
+        }
+      }
+    }
+  }
+  &__user {
+    background-color: $color-white;
+    border-radius: 0.5rem;
+    padding: 3rem 3rem;
+    gap: 1rem;
+    @include respond(min-phone) {
+      padding: 3rem 1rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      padding: 1rem 0;
+    }
+    &--appearance {
+      background-color: $color-white;
+      border: 2px solid rgb(203, 201, 201);
+      padding: 3rem 3rem;
+      border-radius: 0.4rem;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+        border: 2px solid rgb(224, 221, 221);
+      }
+      &-1 {
+        background-color: $color-black;
+        border: 2px solid rgb(52, 51, 51);
+        padding: 3rem 5rem;
+        border-radius: 0.4rem;
+        cursor: pointer;
+        color: $color-white;
+        transition: all 0.3s;
+      }
+      &:hover {
+        border: 2px solid rgb(224, 221, 221);
+      }
+    }
+
+    &--name {
+      gap: 0.6rem;
+
+      label {
+        font-size: 1.6rem;
+        font-weight: 600;
+      }
+
+      input {
+        border: 1px solid rgb(181, 178, 178);
+        outline: none;
+        font-size: 1.6rem;
+        padding: 1rem 1rem;
+        border-radius: 0.5rem;
+        // transition: all 0.3s;
+
+        &:hover {
+          border: 1px solid $color-tertiary;
+        }
+        &:focus,
+        &:active {
+          border: 2px solid $color-tertiary-text;
+        }
+      }
+    }
+  }
+  &__footer {
+    background-color: rgb(222, 222, 222);
+    margin-top: 2rem;
+    padding: 1rem 0;
+    gap: 2rem;
+
+    &-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      @include respond(phone){
+      gap: 1rem;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: flex-start;
+      }
+
+      a {
+        &:link,
+        &:visited {
+          font-size: 1.6rem;
+          margin-bottom: -2rem;
+          margin-top: 2rem;
+          // color: $color-tertiary;
+          color: $color-tertiary-text;
+          font-weight: 700;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+      p {
+        font-size: 1.4rem;
+        color: $color-black-light;
+      }
+    }
+  }
+}
+// Special Styling of check box
+#settings__user-checkbox {
+  margin-right: 1rem;
+  font-size: 2rem;
+}
+#checkbox-input {
+  padding: 0.5rem 0;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+
+  &:hover {
+    background-color: $color-primary-dark;
+  }
+}
+#file-input {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+  }
+  input {
+    width: 100%;
+    padding: 1.5rem 1rem;
+    font-size: 2rem;
+  }
+}
+
+// Others Classes and Ids
+.file {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+#settings__user-color {
+  // width: 100%;
+  padding: 0rem 0;
+}
+#color-receive {
+  padding: 1rem;
+  border: none;
+  outline: none;
+}
+.color {
+  display: flex;
+  align-items: center;
+  border: 1px solid $color-tertiary;
+  border-radius: 0.5rem;
+  padding: 0.3rem 0.3rem;
+
+  &__para {
+    font-size: 1.4rem;
+  }
+}
+
+.save__btn {
+  padding: 1rem 1rem;
+  background-color: $color-tertiary-text;
+  color: $color-white;
+  text-align: center;
+  font-size: 1.8rem;
+  border-radius: 0.5rem;
+
+  &:hover {
+    background-color: $color-tertiary-text-light;
+  }
+}
+.new__password--btn {
+  padding: 1rem 1rem;
+  background-color: $color-tertiary-text;
+  color: $color-white;
+  text-align: center;
+  font-size: 1.8rem;
+  border-radius: 0.5rem;
+
+  &:hover {
+    background-color: $color-tertiary-text-light;
+  }
+}
+
+// Message After the user click save btn
+.message__record {
+  background-color: green;
+  // border-radius: 0.5rem;
+  padding: 1rem 5rem;
+  gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  p {
+    font-size: 2rem;
+    color: white;
+  }
+  span {
+    font-size: 4rem;
+    cursor: pointer;
+    padding: 0.2rem;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+    &:active {
+      transform: active(0.95);
+    }
+  }
+}
+
+// Displaying Active content
+.container__content--active {
+  display: flex;
+  gap: 2rem;
+}

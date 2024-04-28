@@ -1,13 +1,18 @@
 .btn {
   &:visited,
   &:link {
-    font-size: 1.2rem;
+    display: inline-block;
+    font-size: 1.8rem;
     text-transform: uppercase;
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 1.6rem;
     background-color: $color-tertiary;
     color: $color-white;
     border-radius: 3px;
     transition: all 0.3s;
+    @include respond(tab-land) {
+      padding: 0.8rem 1.4rem;
+      font-size: 1.5rem;
+    }
   }
 
   &:hover {
@@ -31,11 +36,60 @@
   }
 }
 #btn__cookies--decline {
-@include btn-style;
+  @include btn-style;
 }
 
 #btn__cookies--accept,
 #btn__cookies--decline {
-  font-size: 1.1rem;
+  font-size: 1.6rem;
   text-align: center;
+}
+
+.btn-works {
+  &:visited,
+  &:link {
+    margin-top: 2rem;
+    display: inline-block;
+    // text-align: center;
+    // border-bottom: 1px solid;
+
+    font-size: 1.8rem;
+    color: $color-tertiary;
+    padding: 0.4rem 0.1rem;
+    transition: all 0.5s;
+    border-bottom: 1px solid rgb(95, 92, 92);
+  }
+  &:hover {
+    transform: scale(1.03);
+    // box-shadow: 0 7px 6px  rgba($color-primary-light, 1 );
+    border-bottom: 1px solid;
+  }
+  &:active {
+    transform: scale(1.03);
+    // box-shadow: 0 7px 6px  rgba($color-primary-light, );
+  }
+}
+.btn-meet {
+  &:visited,
+  &:link {
+    margin-top: 3rem;
+    display: inline-block;
+
+    font-size: 1.8rem;
+    color: $color-white;
+    background-color: $color-tertiary-text;
+    padding: 1rem 1.6rem;
+    transition: all 0.5s;
+    border-radius: 1.6rem;
+    // border-bottom: 1px solid rgb(95, 92, 92);
+  }
+  &:hover {
+    transform: scale(1.03);
+    // box-shadow: 0 7px 6px  rgba($color-primary-light, 1 );
+    // border-bottom: 1px solid;
+  }
+  &:active {
+    transform: scale(1.03);
+    // box-shadow: 0 7px 6px  rgba($color-primary-light, );
+  }
 }

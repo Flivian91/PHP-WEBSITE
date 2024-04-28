@@ -15,6 +15,11 @@
   align-items: center;
   justify-content: flex-start;
 }
+.flex-row__space-evenly {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
 .flex-column {
   display: flex;
   flex-direction: column;

@@ -1,0 +1,265 @@
+.main-section {
+  display: block; //Temporaly style
+  position: relative;
+}
+.main {
+  position: relative;
+
+  &__nav {
+    padding: 0 2rem;
+    position: fixed;
+    background-color: $color-white;
+
+    top: 0.5rem;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+
+    &--left {
+      display: grid;
+      grid-template-columns: 5rem 1.5fr;
+      gap: 2rem;
+    }
+    &--logo {
+      padding: 0.5rem;
+      img {
+        border-radius: 0.5rem;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        transition: all 0.4s;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+        &:active {
+          transform: scale(0.95);
+        }
+      }
+    }
+    &--search {
+      background-color: #f7f7f7;
+      border: 1.5px solid $color-tertiary;
+      border-radius: 0.5rem;
+      padding: 0.1rem 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      transition: all 0.3s;
+      @include respond(tab-port) {
+        display: none;
+      }
+
+      &:hover {
+        border: 1.5px solid $color-tertiary-text;
+      }
+
+      input {
+        font-size: 1.8rem;
+        height: 3.4rem;
+        border: none;
+        width: 35rem;
+        outline: none;
+        background-color: transparent;
+
+        &:focus {
+          &.main__nav--search {
+            border: 2px solid $color-accent;
+          }
+        }
+      }
+      i {
+        padding: 1rem;
+        font-size: 2rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgba(217, 211, 211, 0.459);
+        }
+      }
+    }
+    &--right {
+      gap: 2rem;
+    }
+    &--create-post {
+      // background-color: green;
+      // padding: 0.5rem .8rem;
+      border: 1px solid $color-tertiary-text;
+      border-radius: 0.5rem;
+      @include respond(tab-port) {
+        display: none;
+      }
+
+      &:hover {
+        background-color: $color-tertiary-text;
+        color: $color-white;
+        border: 1px solid $color-white;
+      }
+
+      a {
+        &:link,
+        &:visited {
+          padding: 0.8rem 2rem;
+          font-size: 2rem;
+          color: $color-tertiary-text;
+          border: none;
+          font-weight: 500;
+        }
+        &:hover {
+          text-decoration: underline;
+          color: $color-white;
+        }
+      }
+    }
+
+    &--notification {
+      position: relative;
+      padding: 0.3rem;
+      border-radius: 0.8rem;
+      transition: all 0.3s;
+      cursor: pointer;
+      &:hover {
+        background-color: #eee8e8;
+      }
+
+      ion-icon {
+        color: $color-black;
+        font-size: 3rem;
+      }
+      span {
+        position: absolute;
+        top: -0.8rem;
+        right: -0.5rem;
+        padding: 0.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        width: 2.5rem;
+        font-size: 1.4rem;
+        color: $color-white;
+        height: 2.5rem;
+        background-color: red;
+        border: 1px solid $color-white;
+      }
+    }
+    &--profile {
+      padding: 0.3rem 0.4rem;
+      button {
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        padding: 0.5rem;
+        transition: all 0.3s;
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+
+        &:hover {
+          background-color: #eee8e8;
+        }
+      }
+
+      img {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+// Profile Section
+.profile {
+  //
+  // Apply display none
+  &__drop {
+    // margin-top: 8rem;
+    border: 1px solid rgb(184, 177, 177);
+
+    position: fixed;
+    display: block;
+    top: 6rem;
+    right: 3rem;
+    padding: 0.5rem 0.8rem;
+    // padding-right: 5rem;
+    background-color: $color-background-final-hero;
+    border-radius: 0.5rem;
+    z-index: 101;
+  }
+
+  a {
+    &:link,
+    &:visited {
+      font-size: 1.6rem;
+      color: $color-black;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__drop {
+    gap: 1rem;
+  }
+  &__name {
+    padding: 1.2rem 0.5rem;
+    padding-right: 12rem;
+    transition: all 0.3s;
+
+    &:hover {
+      border-radius: 0.5rem;
+      background-color: $color-primary-light;
+    }
+    a {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__other {
+    padding: 1.2rem 0.8rem;
+    padding-right: 15rem;
+    transition: all 0.3s;
+
+    &:hover {
+      border-radius: 0.5rem;
+      background-color: $color-primary-light;
+    }
+  }
+  &__option {
+    padding: 1rem 0;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+  }
+}
+.profile .active.profile__drop {
+  display: none;
+}
+
+//============ Progress Bar On the top
+// Applying Style for progressbar
+.progressbar {
+  height: 0.5rem;
+  background-color: white;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+}
+
+.progressbar .progress {
+  position: absolute;
+  height: 100%;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background-color: $color-tertiary;
+  animation: progress-animation 2s;
+  display: none;
+}
+@keyframes progress-animation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}

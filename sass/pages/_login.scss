@@ -1,0 +1,247 @@
+.login-section {
+  // margin-top: 2rem;
+  background-color: $color-primary-dark;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  right: 0;
+  margin: auto;
+}
+.login {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  right: 0;
+  margin: auto;
+  width: 60rem;
+  background-color: $color-white;
+  box-shadow: 0 1px 3px rgb(201, 199, 199);
+  border-radius: 1rem;
+  // background-image: linear-gradient(to right top, #2bb765e5, #1ea85a1d);
+  padding: 1rem 3rem;
+  margin-top: 1rem;
+  @include respond(phone) {
+    width: 50rem;
+  }
+  @include respond(min-phone) {
+    padding: 1rem 1rem;
+    width: 40rem;
+  }
+
+  &__header {
+    gap: 1rem;
+    align-items: center;
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+  &__nav {
+    padding: 0.5rem 1rem;
+
+    &--list {
+      display: flex;
+      background-color: rgb(220, 215, 215);
+      gap: 3rem;
+      padding: 0.5rem 2rem;
+      border-radius: 1rem;
+    }
+    &--item {
+      font-size: 1.8rem;
+      font-weight: 600;
+      padding: 0.7rem 5rem;
+      cursor: pointer;
+      @include respond(phone) {
+        padding: 0.7rem 2rem;
+      }
+    }
+  }
+
+  // Main Section
+  &__main {
+    margin-top: 2rem;
+    gap: 1rem;
+  }
+  &__content {
+    gap: 2rem;
+    padding: 1rem;
+
+    &--input {
+      border: 1px solid rgb(94, 93, 93);
+      display: flex;
+      flex-direction: column;
+      padding: 1rem 1rem;
+      border-radius: 1rem;
+      background-color: white;
+
+      position: relative;
+
+      label {
+        position: absolute;
+        top: -1.8rem;
+        font-size: 1.8rem;
+        color: black;
+        background-color: $color-white;
+        z-index: 2;
+      }
+      input {
+        border: none;
+        outline: none;
+        padding: 0.8rem 1rem;
+        font-size: 2rem;
+        border-radius: 1rem;
+
+        &:focus {
+          &.login__content--input {
+            border: 1px solid $color-tertiary;
+          }
+        }
+      }
+    }
+    &--button {
+      display: flex;
+    }
+    &--forget {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &-pass {
+        font-size: 2rem;
+        transition: all 0.3s;
+        font-weight: 600;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+          color: blue;
+        }
+      }
+    }
+  }
+  &__option {
+    border-top: 1px solid rgb(128, 127, 127);
+
+    &--buttons {
+      padding: 1rem 2rem;
+      gap: 1rem;
+      @include respond(phone) {
+        padding: 1rem 1rem;
+      }
+    }
+    &-btn {
+      padding: 1rem 2.5rem;
+
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      // background-color: green;
+      cursor: pointer;
+      border-radius: 0.5rem;
+      border: 1px solid rgb(82, 82, 82);
+      transition: all 0.4s;
+      @include respond(phone) {
+        padding: 1rem 1rem;
+        gap: 0.5rem;
+      }
+      &:hover {
+        background-color: $color-primary-dark;
+      }
+
+      i {
+        font-size: 2rem;
+      }
+
+      span {
+        font-size: 1.6rem;
+        font-weight: 600;
+      }
+    }
+  }
+}
+// Active Login Tab
+.login .login__active {
+  background-color: $color-primary-dark;
+  border-radius: 1rem;
+  box-shadow: 0 1px 2px rgb(137, 135, 135);
+  transform: scale(1.1);
+  transition: all 0.5s;
+
+  &:hover {
+    transform: scale(1.15);
+  }
+  &:active {
+    transform: scale(1);
+  }
+}
+// Message Form
+.message {
+  margin-top: 1rem;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  // justify-content: space-between;
+  gap: 0.3rem;
+
+  button {
+    width: 4.5rem;
+    height: 8px;
+    border: 0;
+    outline: none;
+    border-radius: 1rem;
+  }
+  &_text {
+    font-size: 1.5rem;
+    color: black;
+    margin-left: 20rem;
+  }
+}
+.login .login__button {
+  font-size: 2.5rem;
+  border: none;
+  outline: none;
+  padding: 0.7rem 2rem;
+  width: 100%;
+  border-radius: 1rem;
+  background-color: $color-tertiary-text;
+  color: white;
+  cursor: pointer;
+}
+.login .login__hidden {
+  display: none;
+}
+.color {
+  &-weak {
+    background-color: red;
+    display: none;
+  }
+  &-good {
+    background-color: blue;
+    display: none;
+  }
+  &-perfect {
+    background-color: $color-primary-dark;
+    display: none;
+  }
+  &-excellent {
+    background-color: green;
+    display: none;
+  }
+}
+
+// Email Error
+.email__error {
+  color: red;
+  font-size: 1.6rem;
+  display: flex;
+  padding: 0 5rem;
+  align-items: center;
+  justify-content: space-around;
+  user-select: none;
+  
+}

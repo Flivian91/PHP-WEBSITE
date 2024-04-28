@@ -1,0 +1,146 @@
+.network {
+  padding: 2rem 0rem;
+  padding-left: 2rem;
+  border-radius: 2rem;
+
+  @include respond(phone) {
+    padding-left: 1rem;
+  }
+
+  &__image {
+    gap: 1rem;
+    padding-top: 4rem;
+    overflow: hidden;
+    // padding-left: .6rem;
+    //     padding-right: .6rem;
+
+    &--details {
+      padding-left: 0.6rem;
+      padding-right: 0.6rem;
+
+      h1 {
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        margin-top: 0.3rem;
+        margin-bottom: 1rem;
+        font-weight: 800;
+        color: $color-black;
+        @include respond(phone) {
+          padding: 0;
+        }
+      }
+    }
+
+    &--info {
+      justify-content: space-between;
+      // align-items: center;
+      // text-align: center;
+
+      span {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: $color-black;
+      }
+
+      p {
+        font-size: 1.2rem;
+        color: $color-black-light;
+      }
+
+      &-middle {
+        text-align: center;
+      }
+    }
+
+    &--body {
+      // transform: translateX(5rem);
+      padding-left: 0.6rem;
+      padding-right: 0.6rem;
+    }
+
+    &--picture {
+      padding-left: 0.6rem;
+      padding-right: 0.6rem;
+      border-right: 1px solid black;
+      border-left: 1px solid black;
+
+      img {
+        max-width: 100%;
+        cursor: pointer;
+        // opacity: 0.5;
+        border-radius: 0.3rem;
+      }
+    }
+  }
+  &__change {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding-top: 2rem;
+    transition: all 0.4s;
+    padding: 2px;
+
+    ion-icon {
+      font-size: 4rem;
+      cursor: pointer;
+      color: $color-tertiary;
+      // box-shadow: 0 1px 1px black;
+      border-radius: 50%;
+
+      &:hover {
+        transform: scale(1.08);
+        background-color: white;
+        color: black;
+      }
+      &:active {
+        transform: scale(0.92);
+      }
+    }
+  }
+}
+.works__heading .btn-meet-fellow {
+  margin-top: 1rem;
+}
+
+// .network__image--picture .image1 {
+//   height: 18rem;
+//   opacity: 1;
+//   border-left: 0px;
+// }
+// .network__image .body1 {
+//   border-left: 1px solid black;
+// }
+// .network__image .p1 {
+//   border-left: 0;
+// }
+
+// // applied in js
+// .network__image .main-image {
+//   animation: imageSlider 1s ease-out;
+
+// }
+
+// Applied in js
+.network__image--body .network__image--details .info-image {
+  display: none;
+}
+
+.network .works__heading {
+  @include respond(phone) {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 1rem 2rem;
+  }
+}
+
+.network .network__image {
+  @include respond(phone) {
+    grid-template-columns: 10rem 1fr 1fr;
+  }
+}
+#network-last-image {
+  @include respond(phone) {
+    display: none;
+  }
+}

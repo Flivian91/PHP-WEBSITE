@@ -1,0 +1,280 @@
+.notification-section {
+  padding: 1rem 15rem;
+  @include respond(tab-port1100) {
+    padding: 1rem 8rem;
+  }
+  @include respond(tab-port) {
+    padding: 1rem 3rem;
+  }
+  @include respond(phone745) {
+    padding: 1rem 5rem;
+  }
+  @include respond(phone) {
+    padding: 1rem 2rem;
+  }
+  @include respond(min-phone) {
+    padding: 1rem 0.5rem;
+  }
+}
+.notification {
+  gap: 2rem;
+
+  &__header {
+    &--title {
+      font-size: 3rem;
+      font-weight: 800;
+      color: $color-black;
+    }
+    &--settings {
+      font-size: 1.8rem;
+      padding: 0.5rem 1rem;
+      font-weight: 600;
+      border-radius: 0.5rem;
+      transition: all 0.3s;
+      color: $color-black;
+      user-select: none;
+      cursor: pointer;
+      &:hover {
+        background-color: $color-primary-dark;
+        color: $color-tertiary-text;
+      }
+      &:active {
+        color: $color-tertiary-text;
+        opacity: 0.8;
+      }
+    }
+  }
+  &__container {
+    display: grid;
+    grid-template-columns: 26rem 1fr;
+    gap: 2rem;
+    @include respond(tab-port1100) {
+      display: grid;
+      grid-template-columns: 23rem 1fr;
+      gap: 2rem;
+    }
+    @include respond(tab-port) {
+      grid-template-columns: 20rem 1fr;
+      gap: 1.5rem;
+    }
+    @include respond(phone745) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+  &__nav {
+    gap: 0.2rem;
+    @include respond(phone745) {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+    }
+    @include respond(phone) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      gap: 2rem;
+    }
+
+    &--item {
+      padding: 1rem 1rem;
+      padding-right: 3rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $color-primary-dark;
+        span {
+          color: $color-tertiary-text;
+        }
+      }
+      span {
+        font-size: 1.8rem;
+        color: $color-black;
+        font-weight: 400;
+      }
+    }
+  }
+  &__content {
+    // padding: 2rem 1rem;
+    // display: flex;
+    // flex-direction: column;
+    // gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  &__data {
+    background-color: $color-white;
+    border-left: 1rem solid $color-tertiary-text;
+    box-shadow: 0 1px 3px rgba(191, 188, 188, 0.575);
+
+    display: grid;
+    grid-template-columns: 8rem 1fr;
+    gap: 1rem;
+    padding: 2rem 2rem;
+    border-radius: 0.5rem;
+    @include respond(min-phone) {
+      padding: 2rem 1rem;
+      gap: 0rem;
+      grid-template-columns: 6rem 1fr;
+      border-left: 0.5rem solid $color-tertiary-text;
+    }
+
+    &--profile {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+
+      img {
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        cursor: pointer;
+        @include respond(min-phone) {
+          width: 5rem;
+          height: 5rem;
+        }
+      }
+    }
+  }
+  &__area {
+    gap: 1rem;
+    &--title {
+      // Style to be applied
+
+      span {
+        font-size: 1.6rem;
+      }
+      &-owner {
+        font-size: 2rem;
+        font-weight: 600;
+
+        &:hover {
+          color: $color-tertiary-text;
+        }
+      }
+    }
+    &--time {
+      font-size: 1.4rem;
+    }
+    &--main {
+      border: 1px solid rgba(174, 172, 172, 0.74);
+      padding: 1.5rem 1rem;
+      border-radius: 0.5rem;
+    }
+    &--info {
+      h1 {
+        font-size: 2.3rem;
+        font-weight: 600;
+        cursor: pointer;
+        color: $color-black;
+        transition: all 0.3s;
+
+        &:hover {
+          color: $color-tertiary-text;
+        }
+      }
+    }
+    &--tages {
+      gap: 1rem;
+      padding: 0.5rem 0;
+
+      &-item {
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        font-size: 1.4rem;
+
+        &:hover {
+          background-color: $color-primary-dark;
+        }
+      }
+    }
+    &--reaction {
+      margin-top: 1rem;
+      border-top: 1px solid rgba(187, 184, 184, 0.281);
+      padding-top: 0.5rem;
+      &-likes {
+        gap: 1rem;
+
+        span {
+          font-size: 1.6rem;
+          padding: 0.8rem 1.5rem;
+          cursor: pointer;
+          border-radius: 0.3rem;
+          &:hover {
+            background-color: $color-primary-dark;
+          }
+        }
+      }
+      &-subscribe {
+        padding: 1rem 1rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        border-radius: 0.5rem;
+
+        &:hover {
+          background-color: $color-primary-dark;
+        }
+      }
+    }
+  }
+  &__learn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-primary-dark;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 3rem 0;
+    cursor: pointer;
+    &:hover {
+      background-color: $color-primary-light;
+    }
+
+    span {
+      font-size: 2rem;
+    }
+  }
+}
+
+// Active class Notification
+.notification__nav .notification__nav--active {
+  transition: all 0.3s;
+  background-color: white;
+  color: black;
+  box-shadow: 0 1px 3px rgb(184, 182, 182);
+  &:hover {
+    span {
+      color: $color-tertiary-text;
+    }
+  }
+}
+// Hidden Notification content
+.notification__container .notification__content--active {
+  display: none;
+}
+// Additional Style for icons
+.bookmark,
+.like,
+.subscribe {
+  margin-right: 0.5rem;
+}
+.bookmark-icon {
+  color: blue;
+}
+.bookmark-area {
+  background-color: #0303f926;
+}
+.like-icon {
+  color: red;
+}
+.like-area {
+  background-color: #ff000030;
+}
+.subscribe-area {
+  background-color: #0303f926;
+}
+.subscribe-icon {
+  color: blue;
+}

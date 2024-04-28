@@ -1,0 +1,141 @@
+.menu-section {
+  position: fixed;
+  background-color: transparent;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 3rem 8rem;
+  // padding-top: 10rem;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include respond(phone) {
+    padding: 3rem 3rem;
+  }
+  @include respond(min-phone) {
+    padding: 3rem 2rem;
+  }
+}
+
+.menu {
+  width: 100%;
+  // background-color: red;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  padding: 5rem 2rem;
+  @include respond(min-phone) {
+    padding: 3rem 1rem;
+  }
+  background-image: radial-gradient(
+    $color-primary-light,
+    $color-background-final-1
+  );
+  border-radius: 1rem;
+
+  &__overlay {
+    filter: blur(6px);
+  }
+
+  // Exit button
+  &__exit {
+    position: absolute;
+    right: 3rem;
+    top: 0.3rem;
+    // padding: 2rem;
+    // width: 4rem;
+    // height: 4rem;
+    font-size: 6rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    user-select: none;
+    @include respond(phone) {
+      right: 1rem;
+    }
+
+    &:hover {
+      transform: scale(1.2);
+    }
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+  &__nav {
+    gap: 0.5rem;
+
+    &--item {
+      padding: 2rem 15rem;
+      @include respond(phone) {
+        padding: 2rem 10rem;
+      }
+      @include respond(min-phone) {
+        padding: 2rem 3rem;
+      }
+      cursor: pointer;
+      border-radius: 0.5rem;
+      border-bottom: 1px solid black;
+      background-color: rgb(219, 216, 216);
+      &:hover {
+        background-color: $color-tertiary;
+
+        a {
+          &:link,
+          &:visited {
+            font-size: 2.3rem;
+            color: white;
+          }
+        }
+      }
+
+      a {
+        &:link,
+        &:visited {
+          font-size: 2.3rem;
+          color: black;
+        }
+      }
+    }
+  }
+  &__buttons {
+    margin-top: 2rem;
+    gap: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include respond(tab-port) {
+      display: none;
+    }
+    @include respond(phone) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    a {
+      &:link,
+      &:visited {
+        font-size: 2.3rem;
+
+        padding: 1.2rem 3rem;
+        @include respond(min-phone) {
+          padding: 1rem 1rem;
+        }
+        border-radius: 0.5rem;
+        box-shadow: 0 1px 3px rgb(173, 171, 171);
+      }
+    }
+  }
+
+  &__signin {
+    border: 1px solid grey;
+    background-color: $color-white;
+    color: black;
+  }
+  &__join {
+    background-color: $color-tertiary;
+    color: white;
+  }
+}

@@ -10,6 +10,7 @@
 @import "base/_base";
 @import "base/_typography";
 @import "base/_animations";
+@import "base/media_querry";
 
 // Components
 @import "components/_navigation";
@@ -19,6 +20,16 @@
 @import "components/searchbar";
 @import "components/cookies";
 @import "components/cookies_manager";
+@import "components/_chat";
+@import "components/chatMe";
+@import "components/record";
+@import "components/signin";
+@import "components/hero";
+@import "components/intro";
+@import "components/works";
+@import "components/network";
+@import "components/footer";
+@import "components/menu";
 
 // Layout
 @import "layout/_header";
@@ -28,10 +39,23 @@
 @import "layout/_flex";
 @import "layout/_skill";
 @import "layout/_step";
+@import "layout/signin";
+@import "layout/dropdown";
+@import "layout/intro";
+@import "layout/works";
+@import "layout/network";
+@import "layout/main";
+@import "layout/body-main";
+
 // Pages
 @import "pages/_home";
 @import "pages/_contact";
-@import "pages/_portfolio";
+@import "pages/settings";
+@import "pages/dashboard";
+@import "pages/profile";
+@import "pages/notification";
+@import "pages/create__post";
+@import "pages/login";
 
 // States
 @import "states/_button-states";

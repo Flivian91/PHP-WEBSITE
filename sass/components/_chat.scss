@@ -1,0 +1,21 @@
+.chat {
+  position: relative;
+
+  &__icon {
+    position: fixed;
+    top: 64vh;
+    right: .8rem;
+    // background-color: $color-tertiary-text;
+    // padding: 1.2rem;
+    // border-radius: 2rem;
+    border-top-right-radius: 0;
+    // box-shadow: 0 1px 3px black;
+    cursor: pointer;
+    z-index: 999;
+
+    &--text{
+      font-size: 7rem;
+      color: $color-tertiary;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+.social-media {
+  // background-color: green;
+  padding-left: 0;
+  // padding: 2rem 3rem;
+  margin-top: 3rem;
+  font-size: 2rem;
+  gap: 1.5rem;
+
+  // &:nth-child(1) {
+  //   color: red;
+  // }
+  i {
+    padding: 1rem;
+    // background-color: red;
+    border-radius: 50%;
+    // color: blue;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    &:hover {
+      transform: scale(1.03);
+    }
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+}
+
+.whatsapp {
+  // color: rgb(7, 242, 7);
+  color: black;
+}
+
+.facebook {
+  color: blue;
+}
+
+.instagram {
+  color: rgb(192, 12, 216);
+}
+.twitter {
+  color: rgb(17, 18, 17);
+}
+
+.primary__heading-h1{
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: $color-black;
+}
+.primary__heading-h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: $color-black;
+}

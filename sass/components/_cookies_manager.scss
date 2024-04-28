@@ -1,21 +1,25 @@
 .manager {
-  position: absolute;
-  top: 19vh;
-  left: 20%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
   width: 60%;
+  transform: translate(-50%, -50%);
+  height: 40rem;
   margin: 0 auto;
-  background-color: $color-background-final;
+  background-color: $color-primary-dark;
   color: $color-tertiary-text;
   padding: 0.5rem 1rem;
   box-shadow: 0 3px 4px rgb(184, 183, 183);
   border-radius: 1rem;
+  z-index: 9999;
+  overflow: auto;
 
   &__header {
     border-bottom: 1px solid rgba(0, 0, 0, 0.346);
     padding-right: 2rem;
 
     &--cancel {
-      font-size: 2rem;
+      font-size: 3.5rem;
       color: $color-black;
       cursor: pointer;
       transition: all 0.3s;
@@ -42,13 +46,13 @@
     }
 
     p {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       color: $color-tertiary-text-light;
     }
   }
   &__require {
     em {
-      font-size: 1.2rem;
+      font-size: 1.6rem;
       color: $color-accent;
     }
     h3 {
@@ -57,7 +61,7 @@
       margin-bottom: 1rem;
     }
     p {
-      font-size: 1.1rem;
+      font-size: 1.6rem;
       padding-right: 2rem;
     }
     input {
@@ -74,12 +78,12 @@
 }
 #manager__btn {
   font-size: 1.1rem;
-  max-width: 30%;
+  max-width: 35%;
   margin: 0.4rem 0rem;
   margin-left: 3rem;
 }
 
-.close-cookies {
+.manager__constent .close-cookies {
   display: none;
 }
 

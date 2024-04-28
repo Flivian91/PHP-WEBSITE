@@ -1,0 +1,1666 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Community Compassion: SignUp|Page</title>
+    <meta
+      name="description"
+      content="Join our vibrant online community dedicated to fostering kindness, support, and empowerment. Discover resources, stories, and opportunities to make a positive difference in the lives of others. Together, we can create a world where every act of kindness counts. Join us in spreading love, compassion, and hope."
+    />
+    <meta
+      name="keywords"
+      content="community, compassion, kindness, support, empowerment, helping others, volunteerism, social impact, positive change, unity"
+    />
+    <meta name="author" content="Flivian Mwirigi Front-end Developer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- <link rel="stylesheet" href="css/main.css" /> -->
+
+    <link rel="icon" type="image/x-icon" href="/img/php logo resized.png" />
+  </head>
+  <body>
+    <!-- ===============SignIn Section==================== -->
+    <!-- New Sign Page -->
+    <div class="login-section hidden">
+      <div class="login">
+        <div class="login__header flex-column">
+          <h1>PHP Community</h1>
+          <div class="login__nav">
+            <div class="login__nav--list">
+              <span class="login__nav--item login__active" data-target="1">
+                Login
+              </span>
+              <span class="login__nav--item" data-target="2"> Sign Up </span>
+            </div>
+          </div>
+        </div>
+        <div class="login__main flex-column">
+          <form action="#" class="login__content flex-column login__content-1">
+            <div class="login__content--input">
+              <label for="email">Email</label>
+              <input type="email" id="email" autocomplete="off" />
+            </div>
+
+            <div class="login__content--input password__input">
+              <label for="password">Password</label>
+              <input
+                class="pass"
+                type="password"
+                id="password"
+                autocomplete="off"
+              />
+              <span class="message login__hidden">
+                <button class="color-weak"></button>
+                <button class="color-good"></button>
+                <button class="color-perfect"></button>
+                <button class="color-excellent"></button>
+                <div class="message_text">
+                  <span class="text">-Weak</span>
+                </div>
+              </span>
+            </div>
+            <div class="login__content--button">
+              <button class="login__button loginBtn" type="submit">
+                Login
+              </button>
+            </div>
+            <div class="login__content--forget">
+              <span class="login__content--forget-pass">
+                Forget Password?
+              </span>
+            </div>
+          </form>
+          <form
+            action="#"
+            class="login__content flex-column login__hidden login__content-2"
+          >
+            <div class="login__content--input">
+              <label for="name">Name</label>
+              <input type="text" id="name" autocomplete="off" />
+            </div>
+            <div class="login__content--input">
+              <label for="email-sign">Email</label>
+              <input type="email" id="email-sign" autocomplete="off" />
+              <p class="email__error login__hidden">
+                <span>Email already Exits</span
+                ><i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+              </p>
+            </div>
+            <!-- Email -->
+            <div class="login__content--input password__input">
+              <label for="password-sign">Password</label>
+              <input
+                class="pass"
+                type="password"
+                id="password-sign"
+                autocomplete="off"
+              />
+              <span class="message login__hidden">
+                <button class="color-weak"></button>
+                <button class="color-good"></button>
+                <button class="color-perfect"></button>
+                <button class="color-excellent"></button>
+                <div class="message_text">
+                  <span class="text">-Weak</span>
+                </div>
+              </span>
+            </div>
+            <div class="login__content--button">
+              <button class="login__button create__btn" type="submit">
+                Create Account
+              </button>
+            </div>
+          </form>
+          <div class="login__option flex-column">
+            <div class="login__option--buttons flex-row__space-btwn">
+              <div class="login__option-btn">
+                <i class="fa fa-google" aria-hidden="true"></i>
+                <span>Google</span>
+              </div>
+              <div class="login__option-btn">
+                <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                <span>Facebook</span>
+              </div>
+              <div class="login__option-btn">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <span>Twitter</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <section class="signin-section hidden">
+      <div class="signin">
+        <div class="signin__left flex-column">
+          <div class="nav__left--logo flex-row__start">
+            <a href="#">
+              <img
+                class="signin__left--img"
+                title="Refresh"
+                src="image/php logo.png"
+                alt="PHP logo"
+              />
+            </a>
+            <span>
+              <span class="nav__left--logo-1">P</span>
+              <span class="nav__left--logo-2">H</span>
+              <span class="nav__left--logo-3">P</span>
+            </span>
+          </div>
+          <div class="signin__left--heading flex-column">
+            <div>
+              <h1>Welcome!</h1>
+              <h2>
+                To Our
+                <span>
+                  <span class="nav__left--logo-1">P</span>
+                  <span class="nav__left--logo-2">H</span>
+                  <span class="nav__left--logo-3">P</span>
+                </span>
+                Website.
+              </h2>
+            </div>
+            <p>
+              Welcome to our PHP community website. Sign in or join our
+              community to explore more!
+            </p>
+            <div class="social-media flex-row__start">
+              <span
+                ><i class="fa fa-whatsapp whatsapp" aria-hidden="true"></i
+              ></span>
+              <span
+                ><i
+                  class="fa fa-facebook-square facebook"
+                  aria-hidden="true"
+                ></i
+              ></span>
+              <i class="fa fa-instagram instagram" aria-hidden="true"></i>
+              <i class="fa fa-twitter twitter" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="signin__right flex-column active">
+          <form action="#" class="signin__right--form flex-column">
+            <div class="flex-row__center">
+              <h2>Sign In</h2>
+            </div>
+            <div class="signin__right--form-email flex-column">
+              <input
+                class="signin__input"
+                type="email"
+                id="sign__email-sign"
+                name="email"
+                required
+              />
+              <label class="signin__input--label">Email</label>
+            </div>
+            <div class="signin__right--form-email flex-column">
+              <input
+                class="signin__input"
+                type="password"
+                id="signin__password-sign"
+                name="password"
+                required
+              />
+              <img
+                class="password password__hide"
+                src="img/eyeclosed.png"
+                alt="Eye Close Icon"
+              />
+              <img
+                class="password password__show"
+                src="img/eyeopen1.png"
+                alt="Eye Close Icon"
+              />
+
+              <label class="signin__input--label">Password</label>
+            </div>
+            <div class="flex-row__space-btwn">
+              <div class="signin__checkbox flex-row__center">
+                <input type="checkbox" id="checkbox" name="checkbox" />
+                <label class="remember" for="checkbox">Remember me</label>
+              </div>
+              <div class="signin__right--form-forget-password">
+                <a href="#">Forget Password?</a>
+              </div>
+            </div>
+            <div class="signin__btn btn btn__join">
+              <input
+                id="signin__input-btn"
+                type="submit"
+                value="Sign In"
+                name="submit"
+              />
+            </div>
+            <div class="signin__right--form-no-account flex-row__space-evenly">
+              <p>Don`t have an account?</p>
+              <span class="join-btn" id="join">Join PHP Community</span>
+            </div>
+          </form>
+        </div>
+
+        <div class="signin__right flex-column disabled">
+          <form action="#" class="signin__right--form flex-column">
+            <div class="flex-row__center">
+              <h2>Join Community</h2>
+            </div>
+            <div class="signin__right--form-email flex-column">
+              <input
+                class="signin__input"
+                type="text"
+                id="join__name"
+                name="Name"
+                required
+              />
+              <label class="signin__input--label">Name</label>
+            </div>
+            <div class="signin__right--form-email flex-column">
+              <input
+                class="signin__input"
+                type="email"
+                id="join__email"
+                name="email"
+                required
+              />
+              <label class="signin__input--label">Email</label>
+            </div>
+            <div class="signin__right--form-email flex-column">
+              <input
+                class="signin__input"
+                type="password"
+                id="join__password"
+                name="password"
+                required
+              />
+              <img
+                class="password password__hide"
+                src="img/eyeclosed.png"
+                alt="Eye Close Icon"
+              />
+              <img
+                class="password password__show"
+                src="img/eyeopen1.png"
+                alt="Eye Close Icon"
+              />
+              <label class="signin__input--label">Password</label>
+            </div>
+            <div class="flex-row__space-btwn">
+              <div class="signin__checkbox flex-row__center">
+                <input type="checkbox" id="checkbox1" name="checkbox" />
+                <label class="remember" for="checkbox1"
+                  >I agree to the terms and conditions</label
+                >
+              </div>
+            </div>
+            <div class="signin__btn btn btn__join">
+              <input
+                id="create__btn"
+                type="submit"
+                value="Create account"
+                name="submit"
+              />
+            </div>
+            <div class="signin__right--form-no-account flex-row__space-evenly">
+              <p>Already have an Account</p>
+              <a class="join-btn" id="signin">Sign In</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- ===================Main Page ======================== -->
+    <main class="main-section">
+      <!-- ============Navigation Bar Section================= -->
+      <!-- Progress Bar -->
+      <div class="progressbar">
+        <div class="progress"></div>
+      </div>
+      <section class="main">
+        <nav class="main__nav flex-row__space-btwn">
+          <div class="main__nav--left">
+            <!-- Nav Logo -->
+            <div class="main__nav--logo flex-row__start">
+              <i id="main-menu" class="fa fa-bars" aria-hidden="true"></i>
+              <img src="img/php logo resized.png" alt="Php Logo" />
+            </div>
+            <div class="main__nav--search">
+              <input
+                type="text"
+                placeholder="Search..."
+                id="input__main--search"
+              />
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div class="main__nav--right flex-row__space-evenly">
+            <i id="search" class="fa fa-search" aria-hidden="true"></i>
+
+            <div class="main__nav--create-post">
+              <a href="#" id="create__post-btn">Create Post</a>
+            </div>
+            <div class="main__nav--notification">
+              <!-- icon -->
+              <ion-icon name="notifications-outline"></ion-icon>
+              <span>26</span>
+            </div>
+            <div class="main__nav--profile">
+              <button id="btn-profile">
+                <img
+                  class="profile__img"
+                  src="img/customers/customer-3.jpg"
+                  alt="User profile"
+                />
+              </button>
+            </div>
+          </div>
+        </nav>
+      </section>
+
+      <!-- ================DropDown Profile =================== -->
+      <div class="profile">
+        <div class="profile__drop flex-column hidden">
+          <div class="profile__name">
+            <a href="#">
+              <span id="username">Flivian Mkuu</span>
+              <span id="email-id">@devflivian</span>
+            </a>
+          </div>
+          <div class="profile__option">
+            <div class="profile__other dashboard__btn">
+              <a href="#">Dashboard</a>
+            </div>
+            <div class="profile__other create__post">
+              <a href="#">Create Post</a>
+            </div>
+            <div class="profile__other">
+              <a href="#">Community Hub</a>
+            </div>
+            <div class="profile__other settings__btn">
+              <a href="#">Setting</a>
+            </div>
+          </div>
+
+          <div id="sign-out" class="profile__other">
+            <a href="#">Sign Out</a>
+          </div>
+        </div>
+      </div>
+
+      <!--============= Body section of the main body===========-->
+      <section class="body-section">
+        <!--=========== Post Body Section ========-->
+        <!-- Toogle Hidden class -->
+        <div class="main__body">
+          <!--=========== Side Bar Navigation for Main Body=============== -->
+          <div class="main__aside-nav">
+            <div class="profile__other">
+              <i class="fa fa-home" aria-hidden="true"></i>
+              <a href="#">Home</a>
+            </div>
+            <div class="profile__other">
+              <i class="fa fa-book" aria-hidden="true"></i>
+              <a href="#">Community Hub</a>
+            </div>
+            <div class="profile__other">
+              <i class="fa fa-podcast" aria-hidden="true"></i>
+              <a href="#">Personal Stories</a>
+            </div>
+            <div class="profile__other">
+              <i class="fa fa-video-camera" aria-hidden="true"></i>
+              <a href="#">Personal Stories</a>
+            </div>
+            <div class="profile__other">
+              <i class="fa fa-info-circle" aria-hidden="true"></i>
+              <a href="#">Volunteer Opportunities</a>
+            </div>
+            <div class="profile__other">
+              <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+              <a href="#">Advice & Support</a>
+            </div>
+            <div class="profile__other">
+              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+              <a href="#">Skill Sharing</a>
+            </div>
+            <div class="profile__other">
+              <i class="fa fa-eye" aria-hidden="true"></i>
+              <a href="#">Community Events</a>
+            </div>
+            <div class="profile__other">
+              <i class="fa fa-users" aria-hidden="true"></i>
+              <a href="#">Achievements & Milestones</a>
+            </div>
+            <div class="profile__other">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <a href="#">Social Issue Discussions</a>
+            </div>
+            <div class="profile__other">
+              <i class="fa fa-yelp" aria-hidden="true"></i>
+              <a href="#">About</a>
+            </div>
+            <div class="profile__other">
+              <i class="fa fa-handshake-o" aria-hidden="true"></i>
+              <a href="#">Contact</a>
+            </div>
+            <div class="main__others">Others</div>
+            <div class="profile__other">
+              <i class="fa fa-users" aria-hidden="true"></i>
+              <a href="#">Privacy Policy</a>
+            </div>
+            <div class="profile__other">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <a href="#">Terms of use</a>
+            </div>
+            <div class="social-media flex-row__start">
+              <span
+                ><i class="fa fa-whatsapp whatsapp" aria-hidden="true"></i
+              ></span>
+              <span
+                ><i
+                  class="fa fa-facebook-square facebook"
+                  aria-hidden="true"
+                ></i
+              ></span>
+              <i class="fa fa-instagram instagram" aria-hidden="true"></i>
+              <i class="fa fa-twitter twitter" aria-hidden="true"></i>
+              <i class="fa fa-github" aria-hidden="true"></i>
+            </div>
+            <div class="main--dev">Developed by <a href="#"> @Flivian</a></div>
+          </div>
+
+          <!--================ Post Section================== -->
+          <div class="main__post flex-column">
+            <!-- Post navigation Bar -->
+            <div class="main__post--nav">
+              <span class="main__post--nav-1">Relevant</span>
+              <span>Relatest</span>
+              <span>Top</span>
+            </div>
+            <!-- Post Part -->
+            <div class="main__post--element flex-column">
+              <div class="main__post--container">
+                <div class="main__post--image">
+                  <img
+                    id="post-image"
+                    src="img/degree4.jpg"
+                    alt="Student image"
+                  />
+                </div>
+                <div class="main__post--info flex-column">
+                  <div class="main__post--owner flex-row__start">
+                    <div class="main__post--owner-profile">
+                      <img
+                        id="post-owner-profile"
+                        src="img/customers/customer-6.jpg"
+                        alt="User Profile"
+                      />
+                    </div>
+                    <div class="main__post--owner-name">
+                      <span id="post__owner-name">Flivian</span>
+                      <p id="post__date">Mar 13(2 days ago)</p>
+                    </div>
+                  </div>
+                  <div class="main__post--tags flex-column">
+                    <h1 id="post__heading">
+                      Fitness Fanatics: Workout Tips, Motivation, and Progress
+                      Updates
+                    </h1>
+                    <div class="main__post--tags-nav flex-row__start">
+                      <a id="post__tag1" href="#">#HTML</a>
+                      <a id="post__tag2" href="#">#CSS</a>
+                      <a id="post__tag3" href="#">#JavaScript</a>
+                      <a id="post__tag4" href="#">#Python</a>
+                    </div>
+                  </div>
+                  <div class="main__post--reaction flex-row__start">
+                    <div class="main__post--reaction-emoji flex-row__start">
+                      <div class="main__post--reaction-main flex-row__start">
+                        <div class="main__post--reaction-main-1">
+                          <span>❤️</span>
+                          <span>😋</span>
+                          <span>🥰</span>
+                          <span>🤗</span>
+                        </div>
+
+                        <div class="main__post--reaction-count flex-row__start">
+                          <span id="post__reaction">12</span>
+                          <p>Reactions</p>
+                        </div>
+                      </div>
+                      <div class="main__post--reaction-comment">
+                        <a href="#">
+                          <i class="fa fa-comment-o" aria-hidden="true"></i>
+                          <span>10 Comments</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="main__post--reaction-bookmark flex-row__center">
+                      <p>
+                        <span>2</span>
+                        min read
+                      </p>
+                      <i class="fa fa-bookmark-o" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="main__post--comment flex-row__start">
+                    <div class="main__post--comment-profile">
+                      <img src="img/customers/customer-4.jpg" alt="Profile" />
+                    </div>
+                    <div class="main__post--comment-details">
+                      <p><span>Alpha m.</span> &nbsp; 5 hours ago</p>
+                      <p>
+                        Get moving and grooving with this active discussion on
+                        all things fitness! Share your workout routines, seek
+                        motivation during challenging times, and celebrate your
+                        fitness milestones with a supportive community of health
+                        enthusiasts...
+                      </p>
+                    </div>
+                  </div>
+                  <div class="main__post--see-all">
+                    <span class="post__seeAll"> See all 10 comments </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- =========Discusion Section on the post -->
+          <div class="main__discussions flex-column">
+            <div class="main__discussions--heading">
+              <h1>Active Discussions</h1>
+            </div>
+            <div class="main__discussions--details flex-column">
+              <a href="#"
+                >Overcoming Challenges Together: Personal Stories of
+                Resilience</a
+              >
+              <span>9 comments</span>
+            </div>
+            <div class="main__discussions--details flex-column">
+              <a href="#"
+                >Community Cookbook: Sharing Recipes and Culinary Tips</a
+              >
+              <span>10 comments</span>
+            </div>
+
+            <div class="main__discussions--details flex-column">
+              <a href="#"
+                >Mindful Moments: Cultivating Mental Wellness Together</a
+              >
+              <span>2 comments</span>
+            </div>
+            <div class="main__discussions--details flex-column">
+              <a href="#"
+                >Green Thumb Society: Gardening Tips and Plant Swaps</a
+              >
+              <span>16 comments</span>
+            </div>
+            <div class="main__discussions--details flex-column">
+              <a href="#"
+                >Bookworm Corner: Literary Recommendations and Book Club
+                Discussions</a
+              >
+              <span>8 comments</span>
+            </div>
+            <div class="main__discussions--details flex-column">
+              <a href="#">Community Compassion: Acts of Kindness and Support</a>
+              <span>4 comments</span>
+            </div>
+            <div class="main__discussions--details flex-column">
+              <a href="#"
+                >Travel Tales: Wanderlust Stories and Destination
+                Recommendations</a
+              >
+              <span>4 comments</span>
+            </div>
+          </div>
+        </div>
+
+        <!--============== Profile Section On the Main========== -->
+        <div class="user-section hidden">
+          <div class="user">
+            <div class="user__top"></div>
+            <div class="user__main flex-row__center">
+              <div class="user__profile flex-column">
+                <div class="user__profile--info flex-column">
+                  <div class="user__profile--image">
+                    <img
+                      class="profile__img"
+                      src="img/profile/profile-5.webp"
+                      alt="user Profile"
+                    />
+                    <button class="user__profile--edit">Edit profile</button>
+                  </div>
+                  <div class="user__profile--name flex-column">
+                    <h1 class="user__name">Flivian Mwirigi</h1>
+                    <p class="user__role">Front End web Developer</p>
+                  </div>
+                  <div class="user__profile--others flex-row__center">
+                    <span class="user__location"
+                      ><i class="fa fa-map-marker" aria-hidden="true"></i
+                      >Kenya</span
+                    >
+                    <span class="user__joined--date"
+                      ><i class="fa fa-gift" aria-hidden="true"></i>Joined on
+                      Feb 10, 2024</span
+                    >
+                    <span class="user__email"
+                      ><i class="fa fa-envelope" aria-hidden="true"></i>
+                      flivianDev@gmail.com</span
+                    >
+                  </div>
+                </div>
+                <div class="user__profile--personal flex-row__space-evenly">
+                  <div class="user__profile--personal-info">
+                    <span>Education</span>
+                    <p class="user__school">Kirinyaga University</p>
+                  </div>
+                  <div class="user__profile--personal-info">
+                    <span>Gender</span>
+                    <p class="user__gender">Male</p>
+                  </div>
+                  <div class="user__profile--personal-info">
+                    <span>Work</span>
+                    <p class="user__work">Meccatech</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="user__activities">
+              <div class="user__activities--main">
+                <div class="user__activities--main-left flex-column">
+                  <div class="user__activities--badges flex-column">
+                    <h1>Badges</h1>
+                    <i class="fa fa-certificate" aria-hidden="true"></i>
+                  </div>
+                  <div class="user__activities--badges">
+                    <h1>Language</h1>
+                    <p class="user__language">English</p>
+                  </div>
+                  <div class="user__activities--badges">
+                    <h1>Place of Work</h1>
+                    <p class="user__work">Meccatech</p>
+                  </div>
+                </div>
+                <div class="user__activities--main-right flex-column">
+                  <div class="user__activities--comment-1">
+                    <h1>Recent comments</h1>
+                  </div>
+                  <div class="user__activities--comment">
+                    <h1>
+                      Bookworm Corner: Literary Recommendations and Book Club
+                      Discussions
+                    </h1>
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Iste, nisi.
+                    </p>
+                  </div>
+                  <div class="user__activities--comment">
+                    <h1>
+                      Bookworm Corner: Literary Recommendations and Book Club
+                      Discussions
+                    </h1>
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Iste, nisi.
+                    </p>
+                  </div>
+                  <div class="user__activities--comment">
+                    <h1>
+                      Bookworm Corner: Literary Recommendations and Book Club
+                      Discussions
+                    </h1>
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Iste, nisi.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- =====Information On Saved Message=========== -->
+        <div id="message__save" class="message__save hidden">
+          <div class="message__record">
+            <p>
+              <i class="fa fa-check-square-o" aria-hidden="true"></i> &nbsp;
+              Your profile has been updated
+            </p>
+            <span class="close__record">&times;</span>
+          </div>
+        </div>
+
+        <!-- ===============Settings Section on main ===============-->
+        <div class="setting-section hidden">
+          <div class="settings">
+            <div class="settings__left flex-column">
+              <div data-tab="1" class="settings__tabs settings__active">
+                <span><i class="fa fa-cog" aria-hidden="true"></i></span>
+                <a href="#">Profile</a>
+              </div>
+              <div data-tab="2" class="settings__tabs">
+                <span
+                  ><i class="fa fa-pencil-square-o" aria-hidden="true"></i
+                ></span>
+                <a href="#">Customization</a>
+              </div>
+              <!-- <div class="settings__tabs">
+                <span><i class="fa fa-bell" aria-hidden="true"></i></span>
+                <a href="#">Notifications</a>
+              </div> -->
+              <div data-tab="3" class="settings__tabs">
+                <span><i class="fa fa-user" aria-hidden="true"></i></span>
+                <a href="#">Account</a>
+              </div>
+            </div>
+            <div class="settings__right">
+              <!-- Profile Account -->
+              <div
+                class="settings__container content--1 flex-column container__content--active"
+              >
+                <div class="settings__container--name">
+                  <a class="setting__name" href="#"><span>@</span>Flivian</a>
+                </div>
+                <div class="settings__container--media flex-column">
+                  <a href="#">
+                    <span
+                      ><i class="fa fa-facebook-official" aria-hidden="true"></i
+                    ></span>
+                    Connect From Facebook</a
+                  >
+                  <a href="#">
+                    <span
+                      ><i class="fa fa-twitter" aria-hidden="true"></i
+                    ></span>
+                    Connect From Twitter</a
+                  >
+                </div>
+                <div class="settings__user flex-column">
+                  <h1>User</h1>
+                  <!-- Name Section -->
+                  <div class="settings__user--name flex-column">
+                    <label for="settings__user-name">Name</label>
+                    <input type="text" id="settings__user-name" />
+                  </div>
+                  <!-- Email Section -->
+                  <div class="settings__user--name flex-column">
+                    <label for="settings__user-email">Email</label>
+                    <input type="email" id="settings__user-email" />
+                  </div>
+                  <!-- CheckBox Section -->
+                  <div id="checkbox-input" class="settings__user--name">
+                    <input
+                      type="checkbox"
+                      id="settings__user-checkbox"
+                      checked
+                    />
+                    <label for="settings__user-checkbox"
+                      >Display Email on Profile</label
+                    >
+                  </div>
+                  <!-- Username Section -->
+                  <div class="settings__user--name flex-column">
+                    <label for="settings__user-username">Username</label>
+                    <input type="text" id="settings__user-username" />
+                  </div>
+                  <!-- File section -->
+                  <div id="file-input" class="settings__user--name">
+                    <label>Profile Image</label>
+                    <div class="file">
+                      <img
+                        class="profile__img"
+                        src="img/customers/customer-1.jpg"
+                        alt="User profile"
+                      />
+                      <input type="file" id="settings__user-file" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- user Basics -->
+                <div class="settings__user flex-column">
+                  <h1>Basics</h1>
+                  <!-- Location Section -->
+                  <div class="settings__user--name flex-column">
+                    <label for="settings__user-location">Location</label>
+                    <input type="text" id="settings__user-location" />
+                  </div>
+                  <!-- Bio Section -->
+                  <div class="settings__user--name flex-column">
+                    <label for="settings__user-bio">Bio</label>
+                    <input type="text" id="settings__user-bio" />
+                  </div>
+                  <!-- Gender Section -->
+                  <div class="settings__user--name flex-column">
+                    <label for="settings__user-gender">Gender</label>
+                    <input type="text" id="settings__user-gender" />
+                  </div>
+                  <!-- Work Section -->
+                  <div class="settings__user--name flex-column">
+                    <label for="settings__user-work">Work</label>
+                    <input type="text" id="settings__user-work" />
+                  </div>
+                  <!-- Education section -->
+                  <div class="settings__user--name flex-column">
+                    <label for="settings__user-education">Education</label>
+                    <input type="text" id="settings__user-education" />
+                  </div>
+                  <!-- Language section -->
+                  <div class="settings__user--name flex-column">
+                    <label for="settings__user-language">Language</label>
+                    <input type="text" id="settings__user-language" />
+                  </div>
+                </div>
+                <!-- Branding color -->
+                <div class="settings__user flex-column">
+                  <h1>Branding</h1>
+                  <!-- Color Picker Section -->
+                  <div class="settings__user--name flex-column">
+                    <label for="settings__user-color">Brand color</label>
+                    <p class="color__para">
+                      Used for backgrounds, borders etc.
+                    </p>
+                    <div class="color">
+                      <input
+                        id="settings__user-color"
+                        type="color"
+                        id="settings__user-color"
+                      />
+                      <input id="color-receive" type="text" />
+                    </div>
+                  </div>
+                </div>
+                <div class="settings__user flex-column">
+                  <a class="save__btn" href="#message__save"
+                    >Save Profile Information</a
+                  >
+                </div>
+              </div>
+              <!-- Customization Container -->
+              <div class="settings__container content--2 flex-column">
+                <div class="settings__container--name">
+                  <a class="setting__name" href="#"><span>@</span>Flivian</a>
+                </div>
+
+                <!-- Appearance section -->
+
+                <div class="settings__user flex-column">
+                  <h1>Appearance</h1>
+                  <div class="flex-row__space-evenly">
+                    <div
+                      class="settings__user--name flex-row__center settings__user--appearance"
+                    >
+                      <input
+                        type="radio"
+                        checked
+                        name="mode"
+                        id="settings__user--light-mode"
+                      />
+                      <label for="settings__user--light-mode"
+                        >Light Mode(Default)</label
+                      >
+                    </div>
+                    <div
+                      class="settings__user--name flex-row__center settings__user--appearance-1"
+                    >
+                      <input
+                        name="mode"
+                        type="radio"
+                        id="settings__user--current-dark-mode"
+                      />
+                      <label for="settings__user--current-dark-mode"
+                        >Dark Mode</label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- Font Familly Section -->
+                <div class="settings__user flex-column">
+                  <h1>Font Family</h1>
+                  <div class="grid-2-col-user">
+                    <div
+                      class="settings__user--name flex-row__center settings__user--appearance"
+                    >
+                      <input
+                        type="radio"
+                        checked
+                        name="font"
+                        id="settings__user--font-poppins"
+                      />
+                      <label for="settings__user--font-poppins"
+                        >Poppins(Default)</label
+                      >
+                    </div>
+                    <div
+                      class="settings__user--name flex-row__center settings__user--appearance"
+                    >
+                      <input
+                        type="radio"
+                        name="font"
+                        id="settings__user--font-helvetica"
+                      />
+                      <label for="settings__user--font-helvetica"
+                        >Helvetica</label
+                      >
+                    </div>
+                    <div
+                      class="settings__user--name flex-row__center settings__user--appearance"
+                    >
+                      <input
+                        type="radio"
+                        name="font"
+                        id="settings__user--font-sans-serif"
+                      />
+                      <label for="settings__user--font-sans-serif"
+                        >sans-serif</label
+                      >
+                    </div>
+                    <div
+                      class="settings__user--name flex-row__center settings__user--appearance"
+                    >
+                      <input
+                        type="radio"
+                        name="font"
+                        id="settings__user--font-roboto"
+                      />
+                      <label for="settings__user--font-roboto">Roboto</label>
+                    </div>
+                  </div>
+                  <div class="settings__user flex-column">
+                    <a
+                      class="new__password--btn save__btn"
+                      href="#message__save"
+                      >Save Changes</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- Accounts Container -->
+              <div class="settings__container content--3 flex-column">
+                <div class="settings__container--name">
+                  <a class="setting__name" href="#"><span>@</span>Flivian</a>
+                </div>
+                <div class="settings__container--media flex-column">
+                  <a href="#">
+                    <span
+                      ><i class="fa fa-facebook-official" aria-hidden="true"></i
+                    ></span>
+                    Connect From Facebook</a
+                  >
+                  <a href="#">
+                    <span
+                      ><i class="fa fa-twitter" aria-hidden="true"></i
+                    ></span>
+                    Connect From Twitter</a
+                  >
+                </div>
+                <div class="settings__user flex-column">
+                  <h1>Set New Password</h1>
+                  <!-- Name Section -->
+                  <div class="settings__user--name flex-column">
+                    <label for="settings__user--current-password"
+                      >Current Password</label
+                    >
+                    <input
+                      type="password"
+                      id="settings__user--current-password"
+                    />
+                  </div>
+                  <!-- Email Section -->
+                  <div class="settings__user--name flex-column">
+                    <label for="settings__user--new-password"
+                      >New Password</label
+                    >
+                    <input type="password" id="settings__user--new-password" />
+                  </div>
+
+                  <!-- Username Section -->
+                  <div class="settings__user--name flex-column">
+                    <label for="settings__user--confirm-password"
+                      >Confirm new password</label
+                    >
+                    <input
+                      type="password"
+                      id="settings__user--confirm-password"
+                    />
+                  </div>
+                </div>
+                <div class="settings__user flex-column">
+                  <a class="new__password--btn save__btn" href="#message__save"
+                    >Set new Password</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Footer -->
+          <div class="settings__footer flex-column">
+            <div class="settings__footer-container">
+              <a href="#">Home</a>
+              <a href="#">Community Hub</a>
+              <a href="#">Personal Stories</a>
+              <a href="#">Skill Sharing</a>
+              <a href="#">About</a>
+              <a href="#">Contact us</a>
+            </div>
+            <div class="settings__footer-container">
+              <div class="social-media flex-row__start">
+                <span
+                  ><i class="fa fa-whatsapp whatsapp" aria-hidden="true"></i
+                ></span>
+                <span
+                  ><i
+                    class="fa fa-facebook-square facebook"
+                    aria-hidden="true"
+                  ></i
+                ></span>
+                <i class="fa fa-instagram instagram" aria-hidden="true"></i>
+                <i class="fa fa-twitter twitter" aria-hidden="true"></i>
+                <i class="fa fa-github" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="settings__footer-container">
+              <p>&copy; 2024 Your Company, Inc. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===============Dashboard Section ===============-->
+        <div class="dashboard-section hidden">
+          <!-- ===============Top Part of the DashBoard ===============-->
+          <div class="dashboard__top">
+            <h1>Dashboard</h1>
+            <p>Welcome Back, <span>Flivian</span></p>
+          </div>
+          <div class="dashboard-body flex-column">
+            <!--=============== dashbord main Body===============-->
+            <div class="dashboard">
+              <div class="dashboard__overview flex-row__space-btwn">
+                <div class="dashboard__overview-data">
+                  <span>0</span>
+                  <p>Total Post Reactions</p>
+                </div>
+                <div class="dashboard__overview-data">
+                  <span>0</span>
+                  <p>Total Post Reactions</p>
+                </div>
+                <div class="dashboard__overview-data">
+                  <span>0</span>
+                  <p>Total Post Reactions</p>
+                </div>
+              </div>
+              <div class="dashboard__display">
+                <div class="dashboard__nav flex-column">
+                  <div
+                    class="dashboard__nav--tab flex-row__space-btwn dashboard__nav--active"
+                  >
+                    <p>Post</p>
+                    <span>0</span>
+                  </div>
+                  <div class="dashboard__nav--tab flex-row__space-btwn">
+                    <p>Followers</p>
+                    <span>0</span>
+                  </div>
+                  <div class="dashboard__nav--tab flex-row__space-btwn">
+                    <p>Tasks</p>
+                    <span>0</span>
+                  </div>
+                  <div class="dashboard__nav--tab flex-row__space-btwn">
+                    <p>Notifications</p>
+                    <span>0</span>
+                  </div>
+                  <div class="dashboard__nav--tab flex-row__space-btwn">
+                    <p>Academics</p>
+                  </div>
+                  <div class="dashboard__nav--tab flex-row__space-btwn">
+                    <p>Administration Remarks</p>
+                  </div>
+                </div>
+                <div class="dashboard__content flex-column">
+                  <h1>Posts</h1>
+                  <div class="dashboard__content--container flex-row__center">
+                    <img src="image/error2.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- DashBoard Footer -->
+          <div class="settings__footer dashboard__footer flex-column">
+            <div class="settings__footer-container">
+              <a href="#">Home</a>
+              <a href="#">Community Hub</a>
+              <a href="#">Personal Stories</a>
+              <a href="#">Skill Sharing</a>
+              <a href="#">About</a>
+              <a href="#">Contact us</a>
+            </div>
+            <div class="settings__footer-container">
+              <div class="social-media flex-row__start">
+                <span
+                  ><i class="fa fa-whatsapp whatsapp" aria-hidden="true"></i
+                ></span>
+                <span
+                  ><i
+                    class="fa fa-facebook-square facebook"
+                    aria-hidden="true"
+                  ></i
+                ></span>
+                <i class="fa fa-instagram instagram" aria-hidden="true"></i>
+                <i class="fa fa-twitter twitter" aria-hidden="true"></i>
+                <i class="fa fa-github" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="settings__footer-container">
+              <p>&copy; 2024 Your Company, Inc. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- =========Notification Section -->
+        <div class="notification-section hidden">
+          <div class="notification flex-column">
+            <div class="notification__header flex-row__space-btwn">
+              <span class="notification__header--title">Notifications</span>
+              <span class="notification__header--settings"> Settings </span>
+            </div>
+            <div class="notification__container">
+              <!-- Notification -->
+              <div class="notification__nav flex-column">
+                <div
+                  class="notification__nav--item notification__nav--active"
+                  data-target__notification="#all"
+                >
+                  <span>All</span>
+                </div>
+                <div
+                  class="notification__nav--item"
+                  data-target__notification="#comments"
+                >
+                  <span>Comment</span>
+                </div>
+                <div
+                  class="notification__nav--item"
+                  data-target__notification="#post"
+                >
+                  <span>Post</span>
+                </div>
+              </div>
+              <!--=====All Notification Content==== -->
+              <div
+                class="notification__content"
+                data-notification__content
+                id="all"
+              >
+                <!-- Notification content 1 -->
+                <div class="notification__data">
+                  <div class="notification__data--profile">
+                    <img
+                      src="img/customers/customer-1.jpg"
+                      alt="Client profile picture"
+                    />
+                  </div>
+                  <!-- Content area for Post -->
+                  <div class="notification__area flex-column">
+                    <div class="notification__area--title flex-column">
+                      <span
+                        ><a class="notification__area--title-owner" href="#"
+                          >@flivian</a
+                        >
+                        made a new post.</span
+                      >
+                      <p class="notification__area--time">about 4 hours ago</p>
+                    </div>
+                    <div class="notification__area--main flex-column">
+                      <div class="notification__area--info flex-column">
+                        <h1>This is a new Updated Post On this platform</h1>
+                        <div class="notification__area--tages flex-row__start">
+                          <a class="notification__area--tages-item" href="#"
+                            >#Skills</a
+                          >
+                          <a class="notification__area--tages-item" href="#"
+                            >#Education</a
+                          >
+                          <a class="notification__area--tages-item" href="#"
+                            >#exams</a
+                          >
+                        </div>
+                      </div>
+                      <div
+                        class="notification__area--reaction flex-row__space-btwn"
+                      >
+                        <div
+                          class="notification__area--reaction-likes flex-row__start"
+                        >
+                          <span class="notification__like"
+                            ><i
+                              class="fa fa-heart-o like"
+                              aria-hidden="true"
+                            ></i>
+                            Like</span
+                          >
+                          <span class="notification__bookmark"
+                            ><i
+                              class="fa fa-bookmark-o bookmark"
+                              aria-hidden="true"
+                            ></i>
+                            Save</span
+                          >
+                        </div>
+                        <span class="notification__area--reaction-subscribe">
+                          <i
+                            class="fa fa-bell subscribe"
+                            aria-hidden="true"
+                          ></i>
+                          Subscribe
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Notification content 2 -->
+                <div class="notification__data">
+                  <div class="notification__data--profile">
+                    <img
+                      src="img/customers/customer-1.jpg"
+                      alt="Client profile picture"
+                    />
+                  </div>
+                  <!-- Content area for Post -->
+                  <div class="notification__area flex-column">
+                    <div class="notification__area--title flex-column">
+                      <span
+                        ><a class="notification__area--title-owner" href="#"
+                          >@flivian</a
+                        >
+                        made a new post.</span
+                      >
+                      <p class="notification__area--time">about 4 hours ago</p>
+                    </div>
+                    <div class="notification__area--main flex-column">
+                      <div class="notification__area--info flex-column">
+                        <h1>This is a new Updated Post On this platform</h1>
+                        <div class="notification__area--tages flex-row__start">
+                          <a class="notification__area--tages-item" href="#"
+                            >#Skills</a
+                          >
+                          <a class="notification__area--tages-item" href="#"
+                            >#Education</a
+                          >
+                          <a class="notification__area--tages-item" href="#"
+                            >#exams</a
+                          >
+                        </div>
+                      </div>
+                      <div
+                        class="notification__area--reaction flex-row__space-btwn"
+                      >
+                        <div
+                          class="notification__area--reaction-likes flex-row__start"
+                        >
+                          <span class="notification__like"
+                            ><i
+                              class="fa fa-heart-o like"
+                              aria-hidden="true"
+                            ></i>
+                            Like</span
+                          >
+                          <span class="notification__bookmark"
+                            ><i
+                              class="fa fa-bookmark-o bookmark"
+                              aria-hidden="true"
+                            ></i>
+                            Save</span
+                          >
+                        </div>
+                        <span class="notification__area--reaction-subscribe">
+                          <i
+                            class="fa fa-bell subscribe"
+                            aria-hidden="true"
+                          ></i>
+                          Subscribe
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Div of The Learn More on the end  -->
+                <a href="#" class="notification__learn">
+                  <span>Learn more</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="overlay hidden"></div>
+    </main>
+
+    <!-- ============Create Post Section============ -->
+    <section class="post-section hidden">
+      <!-- Post header -->
+      <div class="post">
+        <div class="post__nav flex-row__space-btwn">
+          <div class="post__nav--logo">
+            <img src="img/php logo resized.png" alt="PHP Logo" />
+            <span>Create Post</span>
+          </div>
+          <div class="post__nav--edit">
+            <span class="post__button active__post" data-post="1">Edit</span>
+            <span class="post__button post__previe-button" data-post="2"
+              >Preview</span
+            >
+          </div>
+          <span title="close the Editor" class="post__nav--cancel">
+            <i class="fa fa-times" aria-hidden="true"></i>
+          </span>
+        </div>
+        <!-- Main Edit Part -->
+        <div class="post__main">
+          <div class="post__main-area">
+            <div class="post__edit post-1 post-data flex-column">
+              <div class="post__edit--top flex-column">
+                <div class="post__edit--cover">
+                  <span class="post__cover-image"> Add a cover Image </span>
+                </div>
+                <div class="post__edit--write">
+                  <input
+                    type="text"
+                    placeholder="New post title here..."
+                    id="post__write"
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="post__edit--tag">
+                  <input
+                    type="text"
+                    placeholder="Add upto 4 tags..."
+                    id="post__tags"
+                    autocomplete="off"
+                  />
+                </div>
+              </div>
+              <!-- Icons section -->
+              <div class="post__edit--icons flex-row__space-btwn">
+                <div class="post__edit--icons-list flex-row__start">
+                  <!-- Bold Icon -->
+                  <span class="post__edit--icons-item">
+                    <i class="fa fa-bold" aria-hidden="true"></i>
+                    <div class="icon__tootip">Bold(Ctrl+B)</div>
+                  </span>
+                  <!-- Italic Icon -->
+                  <span class="post__edit--icons-item">
+                    <i class="fa fa-italic" aria-hidden="true"></i>
+                    <div class="icon__tootip">Italic(Ctrl+I)</div>
+                  </span>
+                  <!-- Link Icon -->
+                  <span class="post__edit--icons-item">
+                    <i class="fa fa-link" aria-hidden="true"></i>
+                    <div class="icon__tootip">Link(Ctrl+K)</div>
+                  </span>
+                  <!-- Ordeered List icon -->
+                  <span class="post__edit--icons-item">
+                    <i class="fa fa-list-ol" aria-hidden="true"></i>
+                    <div class="icon__tootip">list(Ctrl+L)</div>
+                  </span>
+                  <!-- Unordered List icon -->
+                  <span class="post__edit--icons-item">
+                    <i class="fa fa-list-ul" aria-hidden="true"></i>
+                    <div class="icon__tootip">list(Ctrl+Z)</div>
+                  </span>
+                  <!-- Heading icon -->
+                  <span class="post__edit--icons-item">
+                    <i class="fa fa-header" aria-hidden="true"></i>
+                    <div class="icon__tootip">Head(Ctrl+H)</div>
+                  </span>
+                  <!-- Quote Icon -->
+                  <span class="post__edit--icons-item">
+                    <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    <div class="icon__tootip">Qoute(Ctrl+Q)</div>
+                  </span>
+                  <!-- Upload Image icon -->
+                  <span class="post__edit--icons-item">
+                    <i class="fa fa-picture-o" aria-hidden="true"></i>
+                    <div class="icon__tootip">Image(Add)</div>
+                  </span>
+                </div>
+                <!-- Icon menu -->
+                <div class="post__edit--icons-menu">
+                  <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+
+                  <!-- =======Drop down========== -->
+                  <div class="post__dropdown">
+                    <!-- code icon -->
+                    <span class="post__edit--icons-item">
+                      <i class="fa fa-code" aria-hidden="true"></i>
+                      <div class="icon__tootip">code(Ctrl+C)</div>
+                    </span>
+                    <!-- flash Icon -->
+                    <span class="post__edit--icons-item">
+                      <i class="fa fa-bolt" aria-hidden="true"></i>
+                      <div class="icon__tootip">Embed(Ctrl+E)</div>
+                    </span>
+                    <!-- Underline icon -->
+                    <span class="post__edit--icons-item">
+                      <i class="fa fa-underline" aria-hidden="true"></i>
+                      <div class="icon__tootip">U(Ctrl+U)</div>
+                    </span>
+                    <!-- Font Icon -->
+                    <span class="post__edit--icons-item">
+                      <i class="fa fa-font" aria-hidden="true"></i>
+                      <div class="icon__tootip">Font(Ctrl+F)</div>
+                    </span>
+                    <!-- Help icon -->
+                    <span class="post__edit--icons-item">
+                      <i class="fa fa-info-circle" aria-hidden="true"></i>
+                      <div class="icon__tootip">Help(click)</div>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!-- Botton part of Post -->
+              <div class="post__edit--bottom">
+                <div class="post__edit--bottom-textarea">
+                  <textarea
+                    placeholder="Write your post content here..."
+                    id="input__textarea"
+                    cols="30"
+                    rows="10"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="post__preview post-2 post-data flex-column hidden">
+              <img src="img/degree3.jpeg" alt="Post Image" />
+              <div class="post__preview--info flex-column">
+                <h1 class="post__preview--title">Pesronal Development</h1>
+                <div class="post__preview--tags flex-row__start">
+                  <span>#Input</span>
+                  <span>#Input</span>
+                  <span>#Input</span>
+                </div>
+              </div>
+              <div class="post__preview--message">
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Accusamus architecto blanditiis adipisci dolor minima placeat
+                  quaerat itaque veritatis maiores error. Lorem ipsum dolor, sit
+                  amet consectetur adipisicing elit. Eaque, amet. Lorem ipsum
+                  dolor sit, amet consectetur adipisicing elit. Eius dicta quidem
+                  recusandae eaque. Explicabo aliquam tenetur dicta ex ipsam
+                  maiores autem maxime quisquam, natus cum? Inventore facere
+                  ratione dignissimos deserunt.
+                </p>
+              </div>
+            </div> -->
+          </div>
+
+          <!-- Side Guidelines -->
+          <div class="post__guidelines flex-column">
+            <h1 class="post__guidelines--heading">
+              Writing a Great Post Title
+            </h1>
+            <ul class="post__guidelines--list flex-column">
+              <li class="post__guidelines--item">
+                <span
+                  >Think of your post title as a super short (but compelling!)
+                  description — like an overview of the actual post in one short
+                  sentence.</span
+                >
+              </li>
+              <li class="post__guidelines--item">
+                <span>
+                  Use keywords where appropriate to help ensure people can find
+                  your post by search.
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Post footer -->
+        <div class="post__footer flex-row__start">
+          <span class="post__footer--btn post__footer--active"> Publish </span>
+          <span class="post__footer--btn"> Save Draft </span>
+          <span class="post__footer--btn"> Cancel </span>
+        </div>
+      </div>
+
+      <!-- =========Exit Message=============== -->
+      <!-- Set Hidden -->
+      <div class="post__exit flex-column hidden__post">
+        <div class="post__exit--header flex-row__space-btwn">
+          <span>You have unsaved changes</span>
+          <i class="fa fa-times post__exit-button" aria-hidden="true"></i>
+        </div>
+        <div class="post__exit--body">
+          <p>
+            You've made changes to your post. Do you want to navigate to leave
+            this page?
+          </p>
+          <div class="post__exit--body-btn">
+            <span class="post__leave--btn">Yes, Leave the page</span>
+            <span class="post__back-btn">No, Keep the page</span>
+          </div>
+        </div>
+      </div>
+      <!-- Overlay Section -->
+      <div class="post__overlay hidden__post"></div>
+    </section>
+
+    <!-- ============ Side Bar Component On Mobile view ===============-->
+    <div class="side-menu hidden">
+      <div class="times">
+        <h2>PHP Community</h2>
+        <span class="side-close">&times;</span>
+      </div>
+      <div class="profile__other">
+        <i class="fa fa-home" aria-hidden="true"></i>
+        <a href="#">Home</a>
+      </div>
+      <div class="profile__other">
+        <i class="fa fa-book" aria-hidden="true"></i>
+        <a href="#">Community Hub</a>
+      </div>
+      <div class="profile__other">
+        <i class="fa fa-podcast" aria-hidden="true"></i>
+        <a href="#">Personal Stories</a>
+      </div>
+      <div class="profile__other">
+        <i class="fa fa-video-camera" aria-hidden="true"></i>
+        <a href="#">Personal Stories</a>
+      </div>
+      <div class="profile__other">
+        <i class="fa fa-info-circle" aria-hidden="true"></i>
+        <a href="#">Volunteer Opportunities</a>
+      </div>
+      <div class="profile__other">
+        <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+        <a href="#">Advice & Support</a>
+      </div>
+      <div class="profile__other">
+        <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+        <a href="#">Skill Sharing</a>
+      </div>
+      <div class="profile__other">
+        <i class="fa fa-eye" aria-hidden="true"></i>
+        <a href="#">Community Events</a>
+      </div>
+      <div class="profile__other">
+        <i class="fa fa-users" aria-hidden="true"></i>
+        <a href="#">Achievements & Milestones</a>
+      </div>
+      <div class="profile__other">
+        <i class="fa fa-phone" aria-hidden="true"></i>
+        <a href="#">Social Issue Discussions</a>
+      </div>
+      <div class="profile__other">
+        <i class="fa fa-yelp" aria-hidden="true"></i>
+        <a href="#">About</a>
+      </div>
+      <div class="profile__other">
+        <i class="fa fa-handshake-o" aria-hidden="true"></i>
+        <a href="#">Contact</a>
+      </div>
+      <div class="main__others">Others</div>
+      <div class="profile__other">
+        <i class="fa fa-users" aria-hidden="true"></i>
+        <a href="#">Privacy Policy</a>
+      </div>
+      <div class="profile__other">
+        <i class="fa fa-phone" aria-hidden="true"></i>
+        <a href="#">Terms of use</a>
+      </div>
+      <div class="social-media flex-row__start">
+        <span><i class="fa fa-whatsapp whatsapp" aria-hidden="true"></i></span>
+        <span
+          ><i class="fa fa-facebook-square facebook" aria-hidden="true"></i
+        ></span>
+        <i class="fa fa-instagram instagram" aria-hidden="true"></i>
+        <i class="fa fa-twitter twitter" aria-hidden="true"></i>
+        <i class="fa fa-github" aria-hidden="true"></i>
+      </div>
+      <div class="main--dev">Developed by <a href="#"> @Flivian</a></div>
+    </div>
+    <!-- ==============Javascript Files================ -->
+    <script src="js/login.js"></script>
+    <script src="js/signin.js"></script>
+    <script src="js/user__script.js"></script>
+    <script src="js/post.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

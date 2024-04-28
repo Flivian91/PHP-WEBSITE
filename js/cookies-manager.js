@@ -3,6 +3,9 @@
 const managerClose = document.querySelector(".manager-close");
 const manager = document.querySelector(".manager");
 
+
+
+
 // Closing the manager Container
 
 managerClose.addEventListener("click", function () {
@@ -89,6 +92,8 @@ setTimeout(closeCookie, 10000);
 function closeCookie() {
   const cookies = document.querySelector(".cookies");
   cookies.style.display = "none";
+  chatBtn.style.position = "fixed";
+  chatBtn.style.top = "86vh";
 }
 
 // Accept cookies Button.
@@ -96,7 +101,11 @@ const acceptCookieBtn = document.getElementById("btn__cookies--accept");
 
 acceptCookieBtn.addEventListener("click", function () {
   cookies.style.display = "none";
+  chatBtn.style.position = "fixed";
+  chatBtn.style.top = "86vh";
 });
 function acceptCookie() {
   manager.style.display = "none";
+  chatBtn.style.position = "fixed";
+  chatBtn.style.top = "86vh";
 }
